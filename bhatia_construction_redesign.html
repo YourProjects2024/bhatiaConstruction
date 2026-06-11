@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhatia Group | Luxury Real Estate & Infrastructure Developers</title>
+    
+    <!-- Google Fonts: Playfair Display for Serifs, Plus Jakarta Sans for Sans-Serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS Script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#FDFBF7',
+                            100: '#FAF4EB',
+                            200: '#F0E2CD',
+                            300: '#E0C7A1',
+                            400: '#CFA870',
+                            500: '#B88B4A', // Corporate Gold
+                            600: '#9E7238',
+                            700: '#805929',
+                            800: '#61421F',
+                            900: '#472F16',
+                        },
+                        obsidian: {
+                            50: '#F6F6F7',
+                            100: '#ECECED',
+                            200: '#D5D5DA',
+                            300: '#B0B0BA',
+                            400: '#828292',
+                            500: '#5F5F71',
+                            600: '#4B4B5A',
+                            700: '#383844',
+                            800: '#1D1D23',
+                            900: '#0F0F12', // Obsidian Main Dark
+                            950: '#070709',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    boxShadow: {
+                        'premium': '0 20px 40px -15px rgba(184, 139, 74, 0.12)',
+                        'glow': '0 4px 20px 0 rgba(184, 139, 74, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-navbar {
+            background: rgba(15, 15, 18, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(184, 139, 74, 0.15);
+        }
+        .premium-gradient {
+            background: linear-gradient(135deg, #0F0F12 0%, #1D1D23 100%);
+        }
+        .gold-shimmer {
+            background: linear-gradient(90deg, #B88B4A 0%, #E0C7A1 50%, #B88B4A 100%);
+            background-size: 200% auto;
+            animation: shimmer 3s linear infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0F0F12;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #B88B4A;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-obsidian-950 text-slate-100 font-sans antialiased overflow-x-hidden custom-scrollbar">
+
+    <!-- Top Micro Bar -->
+    <div class="bg-obsidian-950 border-b border-obsidian-800 text-[11px] tracking-wider py-2 px-4 md:px-8 flex justify-between items-center text-slate-400">
+        <div class="flex items-center gap-6">
+            <span class="flex items-center gap-1.5"><i data-lucide="phone" class="w-3 h-3 text-gold-500"></i> +91 86556 73970</span>
+            <span class="hidden md:flex items-center gap-1.5"><i data-lucide="mail" class="w-3 h-3 text-gold-500"></i> info@bhatiabuilders.com</span>
+        </div>
+        <div class="flex items-center gap-4">
+            <span class="bg-gold-500/10 text-gold-400 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-widest border border-gold-500/20">CREDAI-MCHI Certified</span>
+            <span class="hidden lg:inline text-gold-400">RERA Registered Portfolio</span>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="sticky top-0 z-50 glass-navbar transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo Brand -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-lg border border-gold-500 flex items-center justify-center bg-obsidian-900 shadow-glow transition-transform group-hover:scale-105">
+                        <span class="font-serif font-bold text-xl text-gold-400">B</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif text-lg font-bold tracking-wide text-white uppercase leading-tight group-hover:text-gold-400 transition-colors">BHATIA GROUP</span>
+                        <span class="text-[9px] tracking-[0.25em] text-gold-500 font-bold uppercase">Builders & Developers</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="#home" class="text-sm font-medium hover:text-gold-400 transition-colors py-2 border-b-2 border-transparent hover:border-gold-500">Home</a>
+                    <a href="#legacy" class="text-sm font-medium hover:text-gold-400 transition-colors py-2 border-b-2 border-transparent hover:border-gold-500">Our Legacy</a>
+                    <a href="#projects" class="text-sm font-medium hover:text-gold-400 transition-colors py-2 border-b-2 border-transparent hover:border-gold-500">Projects</a>
+                    <a href="#services" class="text-sm font-medium hover:text-gold-400 transition-colors py-2 border-b-2 border-transparent hover:border-gold-500">Services</a>
+                    <a href="#calculator" class="text-sm font-medium hover:text-gold-400 transition-colors py-2 border-b-2 border-transparent hover:border-gold-500">EMI & Cost Calculator</a>
+                    <a href="#nri" class="text-sm font-medium hover:text-gold-400 transition-colors py-2 border-b-2 border-transparent hover:border-gold-500">NRI Corner</a>
+                </div>
+
+                <!-- Right Action Buttons -->
+                <div class="hidden lg:flex items-center gap-4">
+                    <a href="#contact" class="px-5 py-2.5 rounded-lg text-sm font-semibold border border-gold-500/40 text-gold-400 hover:bg-gold-500 hover:text-obsidian-950 transition-all duration-300">
+                        Schedule Site Visit
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="flex lg:hidden">
+                    <button type="button" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-white hover:bg-obsidian-800 focus:outline-none">
+                        <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu panel -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-obsidian-900 border-b border-gold-500/20 px-4 pt-2 pb-6 space-y-2">
+            <a href="#home" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-md text-base font-medium hover:bg-obsidian-800 hover:text-gold-400">Home</a>
+            <a href="#legacy" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-md text-base font-medium hover:bg-obsidian-800 hover:text-gold-400">Our Legacy</a>
+            <a href="#projects" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-md text-base font-medium hover:bg-obsidian-800 hover:text-gold-400">Projects</a>
+            <a href="#services" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-md text-base font-medium hover:bg-obsidian-800 hover:text-gold-400">Services</a>
+            <a href="#calculator" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-md text-base font-medium hover:bg-obsidian-800 hover:text-gold-400">EMI Calculator</a>
+            <a href="#nri" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-md text-base font-medium hover:bg-obsidian-800 hover:text-gold-400">NRI Corner</a>
+            <div class="pt-4 border-t border-obsidian-800">
+                <a href="#contact" onclick="toggleMobileMenu()" class="block text-center w-full px-4 py-3 rounded-md bg-gold-500 text-obsidian-950 font-semibold text-sm">
+                    Schedule Site Visit
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header id="home" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-obsidian-950 pt-12">
+        <!-- Visual Architecture Graphic Overlay -->
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#B88B4A_1.5px,transparent_1.5px)] [background-size:24px_24px]"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/40 to-transparent"></div>
+        
+        <!-- Large Architectural Soft-Image Circle Backgrounds (Pure CSS Modern Mockups) -->
+        <div class="absolute right-0 top-1/4 w-[500px] h-[500px] bg-gold-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute left-10 bottom-10 w-[300px] h-[300px] bg-sky-500/5 rounded-full blur-[90px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-12 lg:py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Text Info -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-gold-500/10 border border-gold-500/30 px-3.5 py-1.5 rounded-full text-gold-400 text-xs font-semibold tracking-wider uppercase">
+                        <span class="w-2 h-2 rounded-full bg-gold-500 animate-ping"></span>
+                        Elevating Mumbai & Thane's Skyline Est. 1987
+                    </div>
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight">
+                        Crafting Landmark <br class="hidden sm:inline">
+                        <span class="text-transparent bg-clip-text gold-shimmer font-serif font-semibold">Residences & Centers</span> <br>
+                        of Enduring Value
+                    </h1>
+                    <p class="text-slate-300 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        For 38+ years, Bhatia Group has committed to absolute transparency, flawless design, and premium civil construction, turning aspirations into concrete realities.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#projects" class="w-full sm:w-auto px-8 py-4 bg-gold-500 hover:bg-gold-600 text-obsidian-950 font-bold rounded-lg text-center transition-all duration-300 shadow-glow flex items-center justify-center gap-2">
+                            Explore Landmark Projects
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-obsidian-900 border border-gold-500/30 text-white hover:border-gold-500 font-bold rounded-lg text-center transition-all duration-300 flex items-center justify-center gap-2">
+                            Request Brochure
+                            <i data-lucide="file-text" class="w-4 h-4 text-gold-400"></i>
+                        </a>
+                    </div>
+
+                    <!-- Short Badges -->
+                    <div class="pt-8 border-t border-obsidian-800 grid grid-cols-3 gap-4 max-w-md mx-auto lg:mx-0">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-serif font-bold text-gold-400">38+</div>
+                            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Years Legacy</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-serif font-bold text-gold-400">50+</div>
+                            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Projects Delivered</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-serif font-bold text-gold-400">450+</div>
+                            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Happy Families</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Interactive Visual Panel -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative bg-obsidian-900/60 border border-gold-500/20 p-4 rounded-2xl overflow-hidden shadow-premium">
+                        <!-- Simulated Luxury Building Render Canvas/SVG -->
+                        <div class="relative w-full h-[380px] bg-obsidian-950 rounded-xl overflow-hidden flex flex-col justify-between p-6">
+                            <!-- Background gradient block mimicking modern skyscraper -->
+                            <div class="absolute inset-0 bg-gradient-to-br from-gold-950/20 to-obsidian-900 opacity-60"></div>
+                            
+                            <!-- Custom SVG Sketch of Landmark building with warm golden glowing windows -->
+                            <div class="absolute bottom-0 right-8 left-8 h-4/5 flex justify-center items-end opacity-90">
+                                <svg class="w-full h-full text-gold-500/20" viewBox="0 0 300 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- High rise structure 1 -->
+                                    <rect x="20" y="80" width="80" height="320" rx="4" fill="currentColor" opacity="0.3"/>
+                                    <line x1="20" y1="120" x2="100" y2="120" stroke="#B88B4A" stroke-opacity="0.2" />
+                                    <line x1="20" y1="160" x2="100" y2="160" stroke="#B88B4A" stroke-opacity="0.2" />
+                                    <line x1="20" y1="200" x2="100" y2="200" stroke="#B88B4A" stroke-opacity="0.2" />
+                                    <line x1="20" y1="240" x2="100" y2="240" stroke="#B88B4A" stroke-opacity="0.2" />
+                                    <line x1="20" y1="280" x2="100" y2="280" stroke="#B88B4A" stroke-opacity="0.2" />
+                                    <!-- Windows glowing dots -->
+                                    <circle cx="40" cy="140" r="2" fill="#E0C7A1" />
+                                    <circle cx="60" cy="140" r="2" fill="#E0C7A1" />
+                                    <circle cx="80" cy="140" r="2" fill="#E0C7A1" />
+                                    <circle cx="40" cy="180" r="2" fill="#E0C7A1" />
+                                    <circle cx="60" cy="180" r="2" fill="#E0C7A1" />
+                                    <circle cx="80" cy="180" r="2" fill="#E0C7A1" />
+                                    <circle cx="40" cy="220" r="2" fill="#E0C7A1" />
+                                    <circle cx="60" cy="220" r="2" fill="#E0C7A1" />
+                                    <circle cx="80" cy="220" r="2" fill="#E0C7A1" />
+                                    
+                                    <!-- Luxury tower center structure -->
+                                    <rect x="110" y="30" width="110" height="370" rx="8" fill="currentColor" opacity="0.5"/>
+                                    <rect x="110" y="30" width="110" height="370" rx="8" stroke="#B88B4A" stroke-opacity="0.4" stroke-width="2"/>
+                                    <!-- Glass segments design -->
+                                    <path d="M 110 90 L 220 130" stroke="#B88B4A" stroke-opacity="0.5" stroke-width="1.5"/>
+                                    <path d="M 110 170 L 220 210" stroke="#B88B4A" stroke-opacity="0.5" stroke-width="1.5"/>
+                                    <path d="M 110 250 L 220 290" stroke="#B88B4A" stroke-opacity="0.5" stroke-width="1.5"/>
+                                    <circle cx="130" cy="70" r="3" fill="#B88B4A" />
+                                    <circle cx="165" cy="70" r="3" fill="#B88B4A" />
+                                    <circle cx="200" cy="70" r="3" fill="#B88B4A" />
+                                    <circle cx="140" cy="150" r="3.5" fill="#E0C7A1" />
+                                    <circle cx="180" cy="150" r="3.5" fill="#E0C7A1" />
+                                    <circle cx="140" cy="230" r="3.5" fill="#E0C7A1" />
+                                    <circle cx="180" cy="230" r="3.5" fill="#E0C7A1" />
+                                    
+                                    <!-- Right lower modern commercial block -->
+                                    <rect x="230" y="150" width="60" height="250" rx="4" fill="currentColor" opacity="0.2"/>
+                                    <line x1="230" y1="190" x2="290" y2="190" stroke="#B88B4A" stroke-opacity="0.2"/>
+                                    <line x1="230" y1="230" x2="290" y2="230" stroke="#B88B4A" stroke-opacity="0.2"/>
+                                    <circle cx="250" cy="210" r="1.5" fill="#B88B4A"/>
+                                    <circle cx="270" cy="210" r="1.5" fill="#B88B4A"/>
+                                </svg>
+                            </div>
+
+                            <!-- Header label of mockup -->
+                            <div class="flex justify-between items-start relative z-10">
+                                <div>
+                                    <span class="text-[10px] uppercase font-bold tracking-widest text-gold-400">Featured Landmark</span>
+                                    <h3 class="font-serif text-lg font-bold text-white leading-tight">Esspee Square</h3>
+                                    <p class="text-xs text-slate-400">Borivali East, Mumbai</p>
+                                </div>
+                                <span class="bg-emerald-500/20 text-emerald-400 text-[10px] font-bold px-2.5 py-1 rounded-md border border-emerald-500/30">RERA Approved</span>
+                            </div>
+
+                            <!-- Floating badge showcasing features -->
+                            <div class="bg-obsidian-900/90 border border-gold-500/30 p-3.5 rounded-xl flex items-center justify-between gap-4 shadow-lg relative z-10 mt-auto">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-9 h-9 rounded-lg bg-gold-500/10 flex items-center justify-center border border-gold-500/30 text-gold-400">
+                                        <i data-lucide="building-2" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs text-slate-400">Carpet Area Range</div>
+                                        <div class="text-xs font-bold text-white">415 - 720 Sq.Ft</div>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-xs text-slate-400">Investment starting</div>
+                                    <div class="text-xs font-bold text-gold-400">₹91.55 Lacs*</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mini absolute rating tag -->
+                        <div class="absolute -top-3 -right-3 bg-gold-500 text-obsidian-950 text-[11px] font-bold py-1 px-3 rounded-full shadow-lg rotate-12">
+                            Top Rated Project 2026
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Legacy & Credentials Section -->
+    <section id="legacy" class="py-24 bg-obsidian-900 border-t border-b border-obsidian-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Graphic Legacy Columns -->
+                <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="bg-obsidian-950 p-6 rounded-xl border border-obsidian-800 flex flex-col justify-between h-48 hover:border-gold-500/40 transition-colors">
+                            <i data-lucide="shield-check" class="w-8 h-8 text-gold-500"></i>
+                            <div>
+                                <h4 class="font-serif text-lg font-bold text-white">CREDAI-MCHI</h4>
+                                <p class="text-xs text-slate-400 mt-1">Certified Developer ensuring 100% compliant documentation</p>
+                            </div>
+                        </div>
+                        <div class="bg-obsidian-950 p-6 rounded-xl border border-obsidian-800 flex flex-col justify-between h-56 hover:border-gold-500/40 transition-colors">
+                            <i data-lucide="award" class="w-8 h-8 text-gold-500"></i>
+                            <div>
+                                <h4 class="font-serif text-lg font-bold text-white">15+ Awards</h4>
+                                <p class="text-xs text-slate-400 mt-1">Recognized for architecture & timely project handover in Mumbai</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <div class="bg-obsidian-950 p-6 rounded-xl border border-obsidian-800 flex flex-col justify-between h-56 hover:border-gold-500/40 transition-colors">
+                            <i data-lucide="users" class="w-8 h-8 text-gold-500"></i>
+                            <div>
+                                <h4 class="font-serif text-lg font-bold text-white">Experienced Leadership</h4>
+                                <p class="text-xs text-slate-400 mt-1">Headed by veteran developers Piyush Bhatia & Sharad Bhatia</p>
+                            </div>
+                        </div>
+                        <div class="bg-obsidian-950 p-6 rounded-xl border border-obsidian-800 flex flex-col justify-between h-48 hover:border-gold-500/40 transition-colors">
+                            <i data-lucide="heart" class="w-8 h-8 text-gold-500"></i>
+                            <div>
+                                <h4 class="font-serif text-lg font-bold text-white">450+ Homes</h4>
+                                <p class="text-xs text-slate-400 mt-1">Creating high-comfort lifestyles for generations of residents</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Presentation -->
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-gold-500">Our Pillars of Success</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">
+                        Trusted Name in Mumbai Real Estate Built Over 3 Decades
+                    </h2>
+                    <p class="text-slate-300 font-light leading-relaxed">
+                        Since inception under veteran management, Bhatia Group has carved a reliable niche across prime landmarks in Borivali, Dahisar, Thane, and Mumbai's sub-urban core. We reject compromises on construction materials, partnering only with top structural engineers, premium cement producers, and vetted design consultants.
+                    </p>
+                    <p class="text-slate-300 font-light leading-relaxed">
+                        Whether redeveloping standard housing societies into premium smart residential landmarks, or creating modern Grade-A multi-floor commercial workspaces like <em>The Orion Business Park</em>, we stand for engineering precision.
+                    </p>
+
+                    <!-- Directors signature and quote style -->
+                    <div class="p-6 bg-obsidian-950 rounded-xl border-l-4 border-gold-500 space-y-3">
+                        <p class="italic text-slate-300 text-sm">
+                            "A developer's true blueprint is etched not in concrete, but in the lifetime trust of families. Every home we hand over is verified under strict RERA specifications, representing top-tier quality and capital security."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div>
+                                <div class="font-semibold text-white text-xs">Piyush Bhatia</div>
+                                <div class="text-[10px] text-gold-400 uppercase tracking-widest">Founder & Managing Director</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Project Section -->
+    <section id="projects" class="py-24 bg-obsidian-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-gold-500">Iconic Spaces</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Our Landmark Projects</h2>
+                <p class="text-slate-400 font-light">
+                    Explore our diverse real estate portfolio containing premium residential complexes, high-end corporate centers, and fully completed luxury residential estates.
+                </p>
+
+                <!-- Filter Controls -->
+                <div class="flex flex-wrap items-center justify-center gap-2 pt-6">
+                    <button onclick="filterProjects('all')" class="project-tab-btn active px-5 py-2 rounded-full text-xs font-bold tracking-wider uppercase border border-gold-500 bg-gold-500 text-obsidian-950 transition-all duration-300">
+                        All Projects
+                    </button>
+                    <button onclick="filterProjects('residential')" class="project-tab-btn px-5 py-2 rounded-full text-xs font-bold tracking-wider uppercase border border-obsidian-800 text-slate-400 hover:border-gold-500 hover:text-white transition-all duration-300">
+                        Residential
+                    </button>
+                    <button onclick="filterProjects('commercial')" class="project-tab-btn px-5 py-2 rounded-full text-xs font-bold tracking-wider uppercase border border-obsidian-800 text-slate-400 hover:border-gold-500 hover:text-white transition-all duration-300">
+                        Commercial
+                    </button>
+                    <button onclick="filterProjects('ongoing')" class="project-tab-btn px-5 py-2 rounded-full text-xs font-bold tracking-wider uppercase border border-obsidian-800 text-slate-400 hover:border-gold-500 hover:text-white transition-all duration-300">
+                        Ongoing / New Launches
+                    </button>
+                    <button onclick="filterProjects('completed')" class="project-tab-btn px-5 py-2 rounded-full text-xs font-bold tracking-wider uppercase border border-obsidian-800 text-slate-400 hover:border-gold-500 hover:text-white transition-all duration-300">
+                        Completed (Delivered)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dynamic Project Grid -->
+            <div id="project-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project Card 1 -->
+                <div class="project-card bg-obsidian-900 rounded-xl overflow-hidden border border-obsidian-800 hover:border-gold-500/40 transition-all duration-300 group" data-category="commercial ongoing">
+                    <div class="h-64 bg-obsidian-950 relative overflow-hidden flex items-center justify-center">
+                        <div class="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-transparent to-transparent z-10"></div>
+                        <!-- Beautiful CSS representation of Commercial Center -->
+                        <div class="w-4/5 h-4/5 border border-gold-500/20 rounded-lg bg-obsidian-900/80 p-4 flex flex-col justify-between transition-transform duration-500 group-hover:scale-105">
+                            <div class="flex justify-between items-start">
+                                <span class="bg-gold-500/20 text-gold-300 text-[10px] uppercase font-bold px-2 py-0.5 rounded border border-gold-500/30">Grade-A Corporate</span>
+                                <span class="text-xs text-gold-500 font-bold">Ongoing</span>
+                            </div>
+                            <div class="h-32 flex items-end justify-center py-2">
+                                <div class="w-1/2 h-full flex gap-1 items-end justify-center">
+                                    <div class="w-4 bg-gold-500/30 h-1/2 rounded-t"></div>
+                                    <div class="w-4 bg-gold-500 h-full rounded-t"></div>
+                                    <div class="w-4 bg-gold-500/40 h-3/4 rounded-t"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2.5 py-1 rounded-md border border-amber-500/30 z-20">Premium Launch</span>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div>
+                            <span class="text-xs text-gold-500 font-bold uppercase tracking-wider">Borivali East, Mumbai</span>
+                            <h3 class="font-serif text-xl font-bold text-white mt-1">Esspee Square</h3>
+                            <p class="text-slate-400 text-xs mt-1">High premium corporate suites & commercial storefronts built for growing business entities.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 text-xs py-3 border-t border-b border-obsidian-800">
+                            <div>
+                                <span class="text-slate-400">Area:</span>
+                                <p class="font-semibold text-white">450 - 750 Sq.Ft</p>
+                            </div>
+                            <div>
+                                <span class="text-slate-400">Structure:</span>
+                                <p class="font-semibold text-white">G + 15 Storeys</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-slate-400">RERA Approved</span>
+                            <button onclick="openProjectModal('Esspee Square', 'Borivali East, Mumbai', 'Commercial Office Suites', '₹91.55 Lacs', 'Under Construction', 'G + 15 Premium Corporate Building, double-height lobby, automatic premium lifts, smart card parking, dynamic executive business lounge, 24/7 smart building management systems.')" class="text-xs font-bold text-gold-500 group-hover:text-gold-400 flex items-center gap-1.5 transition-colors">
+                                View Technical Specs <i data-lucide="plus-circle" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card bg-obsidian-900 rounded-xl overflow-hidden border border-obsidian-800 hover:border-gold-500/40 transition-all duration-300 group" data-category="residential completed">
+                    <div class="h-64 bg-obsidian-950 relative overflow-hidden flex items-center justify-center">
+                        <div class="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-transparent to-transparent z-10"></div>
+                        <!-- Beautiful CSS representation of Luxury Residential Tower -->
+                        <div class="w-4/5 h-4/5 border border-gold-500/20 rounded-lg bg-obsidian-900/80 p-4 flex flex-col justify-between transition-transform duration-500 group-hover:scale-105">
+                            <div class="flex justify-between items-start">
+                                <span class="bg-gold-500/20 text-gold-300 text-[10px] uppercase font-bold px-2 py-0.5 rounded border border-gold-500/30">Luxury Apartments</span>
+                                <span class="text-xs text-emerald-400 font-bold">Occupied</span>
+                            </div>
+                            <div class="h-32 flex items-end justify-center py-2">
+                                <div class="w-1/3 h-full flex gap-1.5 items-end justify-center">
+                                    <div class="w-5 bg-gold-500 h-full rounded-t"></div>
+                                    <div class="w-5 bg-gold-500/40 h-2/3 rounded-t"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-emerald-500/20 text-emerald-400 text-[10px] font-bold px-2.5 py-1 rounded-md border border-emerald-500/30 z-20">100% Handover</span>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div>
+                            <span class="text-xs text-gold-500 font-bold uppercase tracking-wider">Dahisar West, Mumbai</span>
+                            <h3 class="font-serif text-xl font-bold text-white mt-1">Bhatia Dahisar Sumati CHS</h3>
+                            <p class="text-slate-400 text-xs mt-1">Spacious premium 1 BHK, 2 BHK & 3 BHK residences, perfectly tailored for families looking for calm neighborhoods.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 text-xs py-3 border-t border-b border-obsidian-800">
+                            <div>
+                                <span class="text-slate-400">Carpet Area:</span>
+                                <p class="font-semibold text-white">415 - 690 Sq.Ft</p>
+                            </div>
+                            <div>
+                                <span class="text-slate-400">Residents:</span>
+                                <p class="font-semibold text-white">Fully Occupied</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-slate-400">RERA Compliant</span>
+                            <button onclick="openProjectModal('Bhatia Dahisar Sumati CHS', 'Dahisar West, Mumbai', 'Luxury 1, 2 & 3 BHK', 'Starting ₹91.55 Lacs', 'Successfully Delivered', 'Ultra-premium location, earthquake-resistant design, high-end architectural finish, standard modular fittings, 24 hours water security, beautiful structural landscape terrace gardens.')" class="text-xs font-bold text-gold-500 group-hover:text-gold-400 flex items-center gap-1.5 transition-colors">
+                                View Technical Specs <i data-lucide="plus-circle" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card bg-obsidian-900 rounded-xl overflow-hidden border border-obsidian-800 hover:border-gold-500/40 transition-all duration-300 group" data-category="commercial completed">
+                    <div class="h-64 bg-obsidian-950 relative overflow-hidden flex items-center justify-center">
+                        <div class="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-transparent to-transparent z-10"></div>
+                        <!-- Business center graphic -->
+                        <div class="w-4/5 h-4/5 border border-gold-500/20 rounded-lg bg-obsidian-900/80 p-4 flex flex-col justify-between transition-transform duration-500 group-hover:scale-105">
+                            <div class="flex justify-between items-start">
+                                <span class="bg-gold-500/20 text-gold-300 text-[10px] uppercase font-bold px-2 py-0.5 rounded border border-gold-500/30">IT Park & Business Hub</span>
+                                <span class="text-xs text-emerald-400 font-bold">Active Hub</span>
+                            </div>
+                            <div class="h-32 flex items-end justify-center py-2">
+                                <div class="w-2/3 h-full flex gap-1 items-end justify-center">
+                                    <div class="w-4 bg-gold-500/20 h-1/3 rounded-t"></div>
+                                    <div class="w-4 bg-gold-500/50 h-2/3 rounded-t"></div>
+                                    <div class="w-4 bg-gold-500 h-full rounded-t"></div>
+                                    <div class="w-4 bg-gold-500/40 h-3/4 rounded-t"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-emerald-500/20 text-emerald-400 text-[10px] font-bold px-2.5 py-1 rounded-md border border-emerald-500/30 z-20">Award Winner</span>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div>
+                            <span class="text-xs text-gold-500 font-bold uppercase tracking-wider">Borivali West, Mumbai</span>
+                            <h3 class="font-serif text-xl font-bold text-white mt-1">The Orion Business Park</h3>
+                            <p class="text-slate-400 text-xs mt-1">State-of-the-art corporate landmark housing multinational firms, equipped with smart amenities.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 text-xs py-3 border-t border-b border-obsidian-800">
+                            <div>
+                                <span class="text-slate-400">Total Units:</span>
+                                <p class="font-semibold text-white">85 Premium Offices</p>
+                            </div>
+                            <div>
+                                <span class="text-slate-400">Completion:</span>
+                                <p class="font-semibold text-white">Delivered On Time</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-slate-400">Top Corporate Destination</span>
+                            <button onclick="openProjectModal('The Orion Business Park', 'Borivali West, Mumbai', 'Commercial Business spaces', 'Fully Occupied', 'Delivered & Active', 'Grade-A tech ecosystem, fiber-optic communication lines, premium meeting pods, high-frequency security scanners, sustainable rainwater recycling frameworks.')" class="text-xs font-bold text-gold-500 group-hover:text-gold-400 flex items-center gap-1.5 transition-colors">
+                                View Technical Specs <i data-lucide="plus-circle" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="project-card bg-obsidian-900 rounded-xl overflow-hidden border border-obsidian-800 hover:border-gold-500/40 transition-all duration-300 group" data-category="residential ongoing">
+                    <div class="h-64 bg-obsidian-950 relative overflow-hidden flex items-center justify-center">
+                        <div class="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-transparent to-transparent z-10"></div>
+                        <!-- Auriga 9 graphical display -->
+                        <div class="w-4/5 h-4/5 border border-gold-500/20 rounded-lg bg-obsidian-900/80 p-4 flex flex-col justify-between transition-transform duration-500 group-hover:scale-105">
+                            <div class="flex justify-between items-start">
+                                <span class="bg-gold-500/20 text-gold-300 text-[10px] uppercase font-bold px-2 py-0.5 rounded border border-gold-500/30">Luxury Skyscraper</span>
+                                <span class="text-xs text-gold-500 font-bold">New Booking</span>
+                            </div>
+                            <div class="h-32 flex items-end justify-center py-2">
+                                <div class="w-1/2 h-full flex gap-1 items-end justify-center">
+                                    <div class="w-5 bg-gold-500/20 h-1/3 rounded-t"></div>
+                                    <div class="w-5 bg-gold-500 h-full rounded-t"></div>
+                                    <div class="w-5 bg-gold-500/50 h-2/3 rounded-t"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-gold-500/25 text-gold-300 text-[10px] font-bold px-2.5 py-1 rounded-md border border-gold-500/30 z-20">Selling Fast</span>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div>
+                            <span class="text-xs text-gold-500 font-bold uppercase tracking-wider">Borivali West, Mumbai</span>
+                            <h3 class="font-serif text-xl font-bold text-white mt-1">Auriga 9</h3>
+                            <p class="text-slate-400 text-xs mt-1">Exquisite designer floor plans featuring private elevators and sweeping balconies over Mumbai skyline.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 text-xs py-3 border-t border-b border-obsidian-800">
+                            <div>
+                                <span class="text-slate-400">Configuration:</span>
+                                <p class="font-semibold text-white">2 & 3 BHK Grand</p>
+                            </div>
+                            <div>
+                                <span class="text-slate-400">RERA Reg No:</span>
+                                <p class="font-semibold text-white">P51800049021</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-slate-400">RERA Approved Portfolio</span>
+                            <button onclick="openProjectModal('Auriga 9', 'Borivali West, Mumbai', 'Super Luxury 2 & 3 BHK', 'Price on Request', 'Ongoing Delivery 2027', 'Exclusive custom layouts, smart automated home features, multi-tier fire-safety protocols, solar grid lighting for shared zones, panoramic terrace skydeck.')" class="text-xs font-bold text-gold-500 group-hover:text-gold-400 flex items-center gap-1.5 transition-colors">
+                                View Technical Specs <i data-lucide="plus-circle" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 5 -->
+                <div class="project-card bg-obsidian-900 rounded-xl overflow-hidden border border-obsidian-800 hover:border-gold-500/40 transition-all duration-300 group" data-category="residential completed">
+                    <div class="h-64 bg-obsidian-950 relative overflow-hidden flex items-center justify-center">
+                        <div class="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-transparent to-transparent z-10"></div>
+                        <!-- Sumati representation -->
+                        <div class="w-4/5 h-4/5 border border-gold-500/20 rounded-lg bg-obsidian-900/80 p-4 flex flex-col justify-between transition-transform duration-500 group-hover:scale-105">
+                            <div class="flex justify-between items-start">
+                                <span class="bg-gold-500/20 text-gold-300 text-[10px] uppercase font-bold px-2 py-0.5 rounded border border-gold-500/30">Esspee Towers</span>
+                                <span class="text-xs text-emerald-400 font-bold">100% Sold</span>
+                            </div>
+                            <div class="h-32 flex items-end justify-center py-2">
+                                <div class="w-1/3 h-full flex gap-1.5 items-end justify-center">
+                                    <div class="w-5 bg-gold-500/30 h-1/2 rounded-t"></div>
+                                    <div class="w-5 bg-gold-500 h-full rounded-t"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-emerald-500/20 text-emerald-400 text-[10px] font-bold px-2.5 py-1 rounded-md border border-emerald-500/30 z-20">Completed</span>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div>
+                            <span class="text-xs text-gold-500 font-bold uppercase tracking-wider">Borivali East, Mumbai</span>
+                            <h3 class="font-serif text-xl font-bold text-white mt-1">Esspee Tower</h3>
+                            <p class="text-slate-400 text-xs mt-1">Premium 2 BHK grand layout tower offering panoramic green vistas of Sanjay Gandhi National Park.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 text-xs py-3 border-t border-b border-obsidian-800">
+                            <div>
+                                <span class="text-slate-400">Carpet Area:</span>
+                                <p class="font-semibold text-white">620 - 720 Sq.Ft</p>
+                            </div>
+                            <div>
+                                <span class="text-slate-400">Starting Price:</span>
+                                <p class="font-semibold text-gold-400">₹1.75 Crore</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-slate-400">Trusted Handover</span>
+                            <button onclick="openProjectModal('Esspee Tower', 'Borivali East, Mumbai', '2 BHK Premium Apartments', '₹1.75 Cr Onwards', 'Delivered & Handed Over', 'Premium vitrified flooring tiles, granite kitchen counters with heavy chrome fixtures, high security locksets, decorative elevator lobby entry gates.')" class="text-xs font-bold text-gold-500 group-hover:text-gold-400 flex items-center gap-1.5 transition-colors">
+                                View Technical Specs <i data-lucide="plus-circle" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 6 -->
+                <div class="project-card bg-obsidian-900 rounded-xl overflow-hidden border border-obsidian-800 hover:border-gold-500/40 transition-all duration-300 group" data-category="residential ongoing">
+                    <div class="h-64 bg-obsidian-950 relative overflow-hidden flex items-center justify-center">
+                        <div class="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-transparent to-transparent z-10"></div>
+                        <!-- Thane Heights display mockup -->
+                        <div class="w-4/5 h-4/5 border border-gold-500/20 rounded-lg bg-obsidian-900/80 p-4 flex flex-col justify-between transition-transform duration-500 group-hover:scale-105">
+                            <div class="flex justify-between items-start">
+                                <span class="bg-gold-500/20 text-gold-300 text-[10px] uppercase font-bold px-2 py-0.5 rounded border border-gold-500/30">Luxury Estate</span>
+                                <span class="text-xs text-gold-500 font-bold">Planned Launch</span>
+                            </div>
+                            <div class="h-32 flex items-end justify-center py-2">
+                                <div class="w-1/2 h-full flex gap-1 items-end justify-center">
+                                    <div class="w-5 bg-gold-500 h-2/3 rounded-t"></div>
+                                    <div class="w-5 bg-gold-500/30 h-1/3 rounded-t"></div>
+                                    <div class="w-5 bg-gold-500/60 h-full rounded-t"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-sky-500/20 text-sky-300 text-[10px] font-bold px-2.5 py-1 rounded-md border border-sky-500/30 z-20">Coming Soon</span>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div>
+                            <span class="text-xs text-gold-500 font-bold uppercase tracking-wider">Ulhasnagar, Thane</span>
+                            <h3 class="font-serif text-xl font-bold text-white mt-1">Bhatia Heights</h3>
+                            <p class="text-slate-400 text-xs mt-1">Upcoming premium multi-floor luxury residential tower showcasing world-class integrated amenities.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 text-xs py-3 border-t border-b border-obsidian-800">
+                            <div>
+                                <span class="text-slate-400">Config:</span>
+                                <p class="font-semibold text-white">1 & 2 BHK Grand</p>
+                            </div>
+                            <div>
+                                <span class="text-slate-400">FEMA Compliant:</span>
+                                <p class="font-semibold text-white">Yes</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-slate-400">Pre-launch Phase</span>
+                            <button onclick="openProjectModal('Bhatia Heights', 'Ulhasnagar, Thane', 'Luxury Highrise Residency', 'Price on Request', 'Upcoming', 'Next-generation solar heaters, high performance fitness studio, child-safe rubber floor playground zone, multi-gate automated entry-exit lanes.')" class="text-xs font-bold text-gold-500 group-hover:text-gold-400 flex items-center gap-1.5 transition-colors">
+                                View Technical Specs <i data-lucide="plus-circle" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Smart Interactive Calculators Hub -->
+    <section id="calculator" class="py-24 bg-obsidian-900 border-t border-b border-obsidian-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Financial Explainer Intro -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-gold-500">Plan Wisely</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Smart Property & Mortgage Calculator</h2>
+                    <p class="text-slate-300 font-light leading-relaxed">
+                        Assess your real estate investments with instant transparency. Drag the interactive sliders below to model down payments, estimate bank interest rates, and formulate detailed monthly EMI schedules.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-full bg-gold-500/10 flex items-center justify-center border border-gold-500/30 text-gold-400 shrink-0 mt-1">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-white">Zero Hidden Charges</h4>
+                                <p class="text-xs text-slate-400">All assessments strictly mirror public bank interest models.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-full bg-gold-500/10 flex items-center justify-center border border-gold-500/30 text-gold-400 shrink-0 mt-1">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-white">Home Loan Assistance Partner</h4>
+                                <p class="text-xs text-slate-400">Bhatia Group maintains official tie-ups with leading financial institutions.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-obsidian-950 p-5 rounded-xl border border-obsidian-800">
+                        <h4 class="text-xs font-bold text-gold-400 uppercase tracking-wider mb-2">Need a custom plan?</h4>
+                        <p class="text-xs text-slate-400 mb-4">Submit calculations directly to our legal team to pre-verify loan criteria.</p>
+                        <a href="#contact" class="inline-flex items-center gap-1.5 text-xs text-white font-bold hover:text-gold-400 transition-colors">
+                            Speak with Relationship Manager <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Interactive Functional Calculator Tool -->
+                <div class="lg:col-span-7 bg-obsidian-950 rounded-2xl p-6 sm:p-8 border border-gold-500/20 shadow-premium space-y-6">
+                    <div class="flex items-center justify-between pb-4 border-b border-obsidian-800">
+                        <h3 class="font-serif text-lg font-bold text-white">Loan EMI Modeler</h3>
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-gold-500">Live Feedback</span>
+                    </div>
+
+                    <!-- Input 1: Property Value -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-xs font-medium">
+                            <label class="text-slate-300">Property Value (INR)</label>
+                            <span class="text-gold-400 font-bold" id="val-property-display">₹1,20,00,000</span>
+                        </div>
+                        <input type="range" id="input-property" min="1000000" max="50000000" step="500000" value="12000000" oninput="calculateMortgage()" class="w-full accent-gold-500 bg-obsidian-900 rounded-lg appearance-none h-2 cursor-pointer">
+                        <div class="flex justify-between text-[10px] text-slate-500">
+                            <span>₹10 L</span>
+                            <span>₹5 Cr</span>
+                        </div>
+                    </div>
+
+                    <!-- Input 2: Downpayment Percentage -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-xs font-medium">
+                            <label class="text-slate-300">Down Payment Percentage</label>
+                            <span class="text-gold-400 font-bold" id="val-downpayment-display">20% (₹24,00,000)</span>
+                        </div>
+                        <input type="range" id="input-downpayment" min="10" id="percent-down" max="50" step="5" value="20" oninput="calculateMortgage()" class="w-full accent-gold-500 bg-obsidian-900 rounded-lg appearance-none h-2 cursor-pointer">
+                        <div class="flex justify-between text-[10px] text-slate-500">
+                            <span>10% Minimum</span>
+                            <span>50% Maximum</span>
+                        </div>
+                    </div>
+
+                    <!-- Two-column: Term & Rate -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Loan Term -->
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-xs font-medium">
+                                <label class="text-slate-300">Loan Term (Years)</label>
+                                <span class="text-gold-400 font-bold" id="val-term-display">20 Years</span>
+                            </div>
+                            <input type="range" id="input-term" min="5" max="30" step="1" value="20" oninput="calculateMortgage()" class="w-full accent-gold-500 bg-obsidian-900 rounded-lg appearance-none h-2 cursor-pointer">
+                            <div class="flex justify-between text-[10px] text-slate-500">
+                                <span>5 Years</span>
+                                <span>30 Years</span>
+                            </div>
+                        </div>
+
+                        <!-- Interest Rate -->
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-xs font-medium">
+                                <label class="text-slate-300">Interest Rate (% P.A.)</label>
+                                <span class="text-gold-400 font-bold" id="val-rate-display">8.5%</span>
+                            </div>
+                            <input type="range" id="input-rate" min="6.0" max="15.0" step="0.1" value="8.5" oninput="calculateMortgage()" class="w-full accent-gold-500 bg-obsidian-900 rounded-lg appearance-none h-2 cursor-pointer">
+                            <div class="flex justify-between text-[10px] text-slate-500">
+                                <span>6.0%</span>
+                                <span>15.0%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Output Summary Panel -->
+                    <div class="p-6 rounded-xl bg-obsidian-900 border border-gold-500/15 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+                        <div class="space-y-1">
+                            <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400">Principal Loan</span>
+                            <p class="text-lg font-bold text-white" id="out-principal">₹96,00,000</p>
+                        </div>
+                        <div class="space-y-1 border-t sm:border-t-0 sm:border-l sm:border-r border-obsidian-800 pt-4 sm:pt-0">
+                            <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400">Total Interest Payable</span>
+                            <p class="text-lg font-bold text-gold-400" id="out-interest">₹1,01,15,412</p>
+                        </div>
+                        <div class="space-y-1 border-t sm:border-t-0 pt-4 sm:pt-0">
+                            <span class="text-[10px] uppercase font-bold tracking-wider text-gold-500">Estimated Monthly EMI</span>
+                            <p class="text-xl font-bold text-emerald-400" id="out-emi">₹82,148</p>
+                        </div>
+                    </div>
+
+                    <!-- Calculator Footer Action -->
+                    <div class="flex items-center gap-3">
+                        <button onclick="unlockMortgageReport()" class="w-full py-3 bg-gold-500 hover:bg-gold-600 text-obsidian-950 font-bold text-sm rounded-lg transition-all duration-300">
+                            Unlock Custom Payment Schedule
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- NRI Investment Corner -->
+    <section id="nri" class="py-24 bg-obsidian-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-gold-500">Global Clientele</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">NRI Investment Services</h2>
+                <p class="text-slate-400 font-light">
+                    Seamless Indian property investment pipelines with full compliance, tax counseling, and continuous remote progress tracking.
+                </p>
+            </div>
+
+            <!-- Three Pillars Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="bg-obsidian-900 p-8 rounded-xl border border-obsidian-800 space-y-4">
+                    <div class="w-12 h-12 bg-gold-500/10 border border-gold-500/30 rounded-lg flex items-center justify-center text-gold-400">
+                        <i data-lucide="scale" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-white">100% FEMA Compliance</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Full compliance alignment with the Foreign Exchange Management Act guidelines. Ensure smooth fund transfers, specialized NRE/NRO banking paths, and clear documentation.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2 pt-2">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-gold-500 shrink-0"></i> Tax advisory for repatriation</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-gold-500 shrink-0"></i> Authorized bank collaborations</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-obsidian-900 p-8 rounded-xl border border-obsidian-800 space-y-4">
+                    <div class="w-12 h-12 bg-gold-500/10 border border-gold-500/30 rounded-lg flex items-center justify-center text-gold-400">
+                        <i data-lucide="user-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-white">Dedicated Relationship Manager</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Say goodbye to geographical barriers. Enjoy access to a single-point continuous relationship associate with secure video calls, transparent progress updates, and personalized virtual walkthroughs.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2 pt-2">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-gold-500 shrink-0"></i> HD virtual drone footage monthly</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-gold-500 shrink-0"></i> Direct video consulting appointments</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-obsidian-900 p-8 rounded-xl border border-obsidian-800 space-y-4">
+                    <div class="w-12 h-12 bg-gold-500/10 border border-gold-500/30 rounded-lg flex items-center justify-center text-gold-400">
+                        <i data-lucide="file-check-2" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-white">Power of Attorney (PoA) Services</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Complete peace of mind. Our experienced legal team facilitates the documentation of authorized local representatives for swift registrations, avoiding long flight coordinates for minor clearances.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2 pt-2">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-gold-500 shrink-0"></i> Legally verified formats</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-gold-500 shrink-0"></i> Zero-hassle execution processes</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom NRI Stats / Trust -->
+            <div class="mt-12 p-8 rounded-xl border border-gold-500/15 premium-gradient flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="space-y-1 text-center md:text-left">
+                    <h4 class="font-serif text-xl font-bold text-white">Trust of over 500+ global NRI investors</h4>
+                    <p class="text-xs text-slate-400">We advise Non-Resident Indians residing in the USA, UAE, UK, Singapore, and Canada.</p>
+                </div>
+                <a href="#contact" class="px-6 py-3 bg-gold-500 hover:bg-gold-600 text-obsidian-950 font-bold text-xs rounded-lg uppercase tracking-wider transition-all duration-300 shrink-0">
+                    Get Free Legal NRI Assessment
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Slider Section -->
+    <section class="py-24 bg-obsidian-900 border-t border-b border-obsidian-800 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-gold-500">Client Reviews</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Voices of Our Happy Patrons</h2>
+                <p class="text-slate-400 font-light">
+                    Read how our strict quality compliance and timely construction turn premium properties into warm families and growing enterprises.
+                </p>
+            </div>
+
+            <!-- Custom Interactive HTML Carousel Slider -->
+            <div class="relative max-w-4xl mx-auto">
+                <div class="overflow-hidden">
+                    <div id="testimonial-slider-track" class="flex transition-transform duration-500 ease-out" style="transform: translateX(0%);">
+                        
+                        <!-- Testimonial 1 -->
+                        <div class="w-full shrink-0 px-4">
+                            <div class="bg-obsidian-950 p-8 sm:p-10 rounded-2xl border border-gold-500/10 space-y-6 text-center relative">
+                                <span class="absolute top-4 left-6 text-7xl font-serif text-gold-500/10 pointer-events-none">“</span>
+                                <p class="text-slate-300 text-sm sm:text-base italic leading-relaxed">
+                                    "Handover of our property at Dahisar Sumati CHS was completed on the exact scheduled week. The structural quality, marble flooring, and smart bathroom layout are exceptional. The management kept us informed every single month with live progress updates."
+                                </p>
+                                <div class="space-y-1">
+                                    <h4 class="font-serif font-bold text-white text-base">Ravindra Gupte</h4>
+                                    <p class="text-xs text-gold-500 uppercase tracking-widest">Resident, Dahisar Sumati CHS</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="w-full shrink-0 px-4">
+                            <div class="bg-obsidian-950 p-8 sm:p-10 rounded-2xl border border-gold-500/10 space-y-6 text-center relative">
+                                <span class="absolute top-4 left-6 text-7xl font-serif text-gold-500/10 pointer-events-none">“</span>
+                                <p class="text-slate-300 text-sm sm:text-base italic leading-relaxed">
+                                    "Securing an office suite in Esspee Square was the best real estate call we made for our audit firm. The central location, double-height lobby, and prompt handling of RERA registries demonstrate why Bhatia Group has survived as an industry leader for decades."
+                                </p>
+                                <div class="space-y-1">
+                                    <h4 class="font-serif font-bold text-white text-base">Arvind K. Shah</h4>
+                                    <p class="text-xs text-gold-500 uppercase tracking-widest">Managing Partner, Shah & Associates</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="w-full shrink-0 px-4">
+                            <div class="bg-obsidian-950 p-8 sm:p-10 rounded-2xl border border-gold-500/10 space-y-6 text-center relative">
+                                <span class="absolute top-4 left-6 text-7xl font-serif text-gold-500/10 pointer-events-none">“</span>
+                                <p class="text-slate-300 text-sm sm:text-base italic leading-relaxed">
+                                    "As an NRI located in Toronto, executing real estate is typically painful. Bhatia Group's team handled everything via NRE accounts seamlessly. The legal advisor explained RERA forms in simple words, and their video stream updates gave absolute security."
+                                </p>
+                                <div class="space-y-1">
+                                    <h4 class="font-serif font-bold text-white text-base">Dr. Sameer Bhat</h4>
+                                    <p class="text-xs text-gold-500 uppercase tracking-widest">Investor, Auriga 9 Block</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="flex items-center justify-center gap-4 mt-8">
+                    <button onclick="prevTestimonial()" class="w-10 h-10 rounded-full border border-gold-500/40 hover:border-gold-500 flex items-center justify-center text-gold-500 hover:bg-gold-500/10 transition-colors">
+                        <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                    </button>
+                    <div class="flex items-center gap-1.5" id="slider-dots">
+                        <span class="w-2.5 h-2.5 rounded-full bg-gold-500 cursor-pointer" onclick="setTestimonial(0)"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-obsidian-800 cursor-pointer" onclick="setTestimonial(1)"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-obsidian-800 cursor-pointer" onclick="setTestimonial(2)"></span>
+                    </div>
+                    <button onclick="nextTestimonial()" class="w-10 h-10 rounded-full border border-gold-500/40 hover:border-gold-500 flex items-center justify-center text-gold-500 hover:bg-gold-500/10 transition-colors">
+                        <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Direct Inquiry & Booking Section -->
+    <section id="contact" class="py-24 bg-obsidian-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Detailed Contact Coordinates -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div class="space-y-4">
+                        <span class="text-xs font-bold uppercase tracking-widest text-gold-500">Immediate Connect</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Schedule A Premium Private Consultation</h2>
+                        <p class="text-slate-400 font-light">
+                            Visit our luxury model suites in Mumbai. Select your preferred date, submit credentials, and our Relationship Director will confirm secure coordinates instantly.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <!-- Card 1 -->
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-lg bg-gold-500/10 flex items-center justify-center text-gold-400 border border-gold-500/20 shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">Registered Corporate Office</h4>
+                                <p class="text-xs text-slate-400 mt-1">
+                                    Office No.3, Esspee Tower, 2nd Floor, CTS No.79, <br>
+                                    Dattapada Road, Off Tata Steel, Borivali East, <br>
+                                    Mumbai, Maharashtra, India - 400066
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-lg bg-gold-500/10 flex items-center justify-center text-gold-400 border border-gold-500/20 shrink-0">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">Direct Phone Contact</h4>
+                                <p class="text-xs text-slate-400 mt-1">Direct Line: +91 86556 73970</p>
+                                <p class="text-xs text-slate-400">Board Helpline: +91 98205 75619</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-lg bg-gold-500/10 flex items-center justify-center text-gold-400 border border-gold-500/20 shrink-0">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">Official Correspondence</h4>
+                                <p class="text-xs text-slate-400 mt-1">Queries: info@bhatiabuilders.com</p>
+                                <p class="text-xs text-slate-400">Support Desk: care@bhatiabuilders.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trust indicators -->
+                    <div class="p-6 bg-obsidian-900 rounded-xl border border-obsidian-800 space-y-3">
+                        <div class="flex items-center gap-2 text-gold-400 text-xs font-bold uppercase tracking-wider">
+                            <i data-lucide="award" class="w-4 h-4"></i> RERA Compliance Verified
+                        </div>
+                        <p class="text-[11px] text-slate-400 leading-relaxed">
+                            Every document, title trace, site blueprint, and floor allocation format strictly aligns with the Maharashtra Real Estate Regulatory Authority rules.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Complete Booking Form Web App -->
+                <div class="lg:col-span-7 bg-obsidian-900 rounded-2xl p-6 sm:p-10 border border-gold-500/15 shadow-premium">
+                    <form id="bookingForm" onsubmit="handleFormSubmission(event)" class="space-y-6">
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <!-- Full Name -->
+                            <div class="space-y-1.5">
+                                <label class="text-xs font-semibold text-slate-300">Your Full Name *</label>
+                                <input type="text" id="form-name" required placeholder="Enter full name" class="w-full bg-obsidian-950 border border-obsidian-800 focus:border-gold-500 rounded-lg p-3 text-sm text-white outline-none transition-colors">
+                            </div>
+                            <!-- Email -->
+                            <div class="space-y-1.5">
+                                <label class="text-xs font-semibold text-slate-300">Email Address *</label>
+                                <input type="email" id="form-email" required placeholder="name@domain.com" class="w-full bg-obsidian-950 border border-obsidian-800 focus:border-gold-500 rounded-lg p-3 text-sm text-white outline-none transition-colors">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <!-- Phone -->
+                            <div class="space-y-1.5">
+                                <label class="text-xs font-semibold text-slate-300">Contact Number (With Country Code) *</label>
+                                <input type="tel" id="form-phone" required placeholder="+91 XXXXX XXXXX" class="w-full bg-obsidian-950 border border-obsidian-800 focus:border-gold-500 rounded-lg p-3 text-sm text-white outline-none transition-colors">
+                            </div>
+                            <!-- Country of Residence (Good for NRIs) -->
+                            <div class="space-y-1.5">
+                                <label class="text-xs font-semibold text-slate-300">Country of Residence *</label>
+                                <select id="form-country" class="w-full bg-obsidian-950 border border-obsidian-800 focus:border-gold-500 rounded-lg p-3 text-sm text-white outline-none transition-colors">
+                                    <option value="India">India</option>
+                                    <option value="United Arab Emirates">United Arab Emirates</option>
+                                    <option value="United States">United States</option>
+                                    <option value="United Kingdom">United Kingdom</option>
+                                    <option value="Singapore">Singapore</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <!-- Selected Project -->
+                            <div class="space-y-1.5">
+                                <label class="text-xs font-semibold text-slate-300">Project of Interest</label>
+                                <select id="form-project" class="w-full bg-obsidian-950 border border-obsidian-800 focus:border-gold-500 rounded-lg p-3 text-sm text-white outline-none transition-colors">
+                                    <option value="Esspee Square">Esspee Square (Borivali East)</option>
+                                    <option value="Auriga 9">Auriga 9 (Borivali West)</option>
+                                    <option value="Dahisar Sumati CHS">Dahisar Sumati (Dahisar West)</option>
+                                    <option value="The Orion Business Park">Orion Business Park (Borivali West)</option>
+                                    <option value="Bhatia Heights">Bhatia Heights (Ulhasnagar, Thane)</option>
+                                    <option value="General Investment">Other / Joint Development Queries</option>
+                                </select>
+                            </div>
+
+                            <!-- Preferred Date of Visit -->
+                            <div class="space-y-1.5">
+                                <label class="text-xs font-semibold text-slate-300">Preferred Site Visit Date</label>
+                                <input type="date" id="form-date" class="w-full bg-obsidian-950 border border-obsidian-800 focus:border-gold-500 rounded-lg p-3 text-sm text-white outline-none transition-colors">
+                            </div>
+                        </div>
+
+                        <!-- Special Request / Message -->
+                        <div class="space-y-1.5">
+                            <label class="text-xs font-semibold text-slate-300">Specific Requirements (Optional)</label>
+                            <textarea id="form-message" rows="4" placeholder="Briefly specify configuration requirement or custom corporate office layout..." class="w-full bg-obsidian-950 border border-obsidian-800 focus:border-gold-500 rounded-lg p-3 text-sm text-white outline-none transition-colors"></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="w-full py-4 bg-gold-500 hover:bg-gold-600 text-obsidian-950 font-bold rounded-lg text-sm transition-all duration-300 shadow-glow flex items-center justify-center gap-2">
+                            Request Immediate Schedule Confirm
+                            <i data-lucide="check-square" class="w-4 h-4"></i>
+                        </button>
+
+                        <p class="text-[10px] text-slate-400 text-center">
+                            By submitting this inquiry format, you consent to receive legal briefs, pricing guides, and site visitation slots from Bhatia Group support teams.
+                        </p>
+                    </form>
+
+                    <!-- Mock Custom Notification Overlay (No Alert Window) -->
+                    <div id="status-notification" class="hidden mt-6 p-4 rounded-xl border flex items-center gap-3">
+                        <i id="status-icon" class="w-5 h-5"></i>
+                        <p id="status-message" class="text-xs font-semibold"></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-obsidian-950 border-t border-obsidian-800 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                
+                <!-- Column 1: Brand & Bio -->
+                <div class="lg:col-span-2 space-y-4">
+                    <a href="#" class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg border border-gold-500 flex items-center justify-center bg-obsidian-900">
+                            <span class="font-serif font-bold text-lg text-gold-400">B</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-serif text-base font-bold text-white uppercase leading-none">BHATIA GROUP</span>
+                            <span class="text-[8px] tracking-widest text-gold-500 uppercase font-bold">Builders & Developers</span>
+                        </div>
+                    </a>
+                    <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
+                        Redefining commercial and residential benchmarks across Mumbai's elite locales since 1987. Bhatia Group delivers robust construction and meticulous execution, matching global standards of quality.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <span class="text-xs text-slate-300 font-bold">CREDAI-MCHI Membership:</span>
+                        <span class="text-xs text-gold-400 bg-gold-500/10 px-2 py-0.5 border border-gold-500/20 rounded">PM C 185</span>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="space-y-4">
+                    <h4 class="font-semibold text-white text-xs uppercase tracking-wider text-gold-400">Company</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#home" class="hover:text-white transition-colors">Back To Top</a></li>
+                        <li><a href="#legacy" class="hover:text-white transition-colors">Our Legacy</a></li>
+                        <li><a href="#projects" class="hover:text-white transition-colors">Landmark Projects</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Residential Redevelopment</a></li>
+                        <li><a href="#calculator" class="hover:text-white transition-colors">Investment Estimators</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Corporate Portfolios -->
+                <div class="space-y-4">
+                    <h4 class="font-semibold text-white text-xs uppercase tracking-wider text-gold-400">Portfolios</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#projects" class="hover:text-white transition-colors">Esspee Square (Borivali)</a></li>
+                        <li><a href="#projects" class="hover:text-white transition-colors">The Orion Business Park</a></li>
+                        <li><a href="#projects" class="hover:text-white transition-colors">Auriga 9 (Luxury 2-3 BHK)</a></li>
+                        <li><a href="#projects" class="hover:text-white transition-colors">Sumati CHS (Dahisar)</a></li>
+                        <li><a href="#projects" class="hover:text-white transition-colors">Bhatia Heights (Thane)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter & Socials -->
+                <div class="space-y-4">
+                    <h4 class="font-semibold text-white text-xs uppercase tracking-wider text-gold-400">Stay Updated</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Receive announcements, regulatory insights, and pre-launch schedules directly in your inbox.
+                    </p>
+                    <div class="flex items-center gap-1.5 bg-obsidian-900 border border-obsidian-800 focus-within:border-gold-500 rounded-lg p-1 transition-colors">
+                        <input type="email" id="newsletter-email" placeholder="Enter email" class="bg-transparent border-none text-xs text-white p-2 outline-none w-full">
+                        <button onclick="subscribeNewsletter()" class="bg-gold-500 text-obsidian-950 p-2 rounded-md font-bold text-xs hover:bg-gold-600 transition-colors shrink-0">
+                            Join
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Regulatory RERA Declarations -->
+            <div class="mt-12 pt-8 border-t border-obsidian-800 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                <div class="lg:col-span-8 text-[11px] text-slate-500 space-y-2 leading-relaxed">
+                    <p>
+                        *Disclaimer: The details, configurations, pricing metrics, and architectural sketch representations featured on this redesigned corporate hub are strictly conceptual for layout showcase. All completed buildings comply with legal RERA standards (e.g. Maharera Registration No. P51800049021 for select blocks). Final contractual pricing, layout provisions, and architectural metrics are dictated entirely by verified allotment letters and eventual lease terms.
+                    </p>
+                    <p>
+                        Copyright &copy; 2026 Bhatia Construction & Developers / Bhatia Group. Designed with structural integrity. All corporate logos are properties of respective entities.
+                    </p>
+                </div>
+                <div class="lg:col-span-4 flex items-center justify-start lg:justify-end gap-4">
+                    <a href="#" class="w-8 h-8 rounded-full bg-obsidian-900 flex items-center justify-center text-slate-400 hover:text-gold-400 transition-colors"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-obsidian-900 flex items-center justify-center text-slate-400 hover:text-gold-400 transition-colors"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-obsidian-900 flex items-center justify-center text-slate-400 hover:text-gold-400 transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-obsidian-900 flex items-center justify-center text-slate-400 hover:text-gold-400 transition-colors"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Technical Spec Sheet Details Modal -->
+    <div id="project-detail-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-obsidian-950/80 backdrop-blur-sm hidden">
+        <div class="bg-obsidian-900 border border-gold-500/30 rounded-2xl p-6 sm:p-8 max-w-lg w-full mx-4 shadow-premium relative space-y-6">
+            <!-- Close button -->
+            <button onclick="closeProjectModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+
+            <!-- Modal Header -->
+            <div class="space-y-1">
+                <span id="modal-project-category" class="text-[10px] uppercase font-bold tracking-widest text-gold-400">Luxury Housing</span>
+                <h3 id="modal-project-title" class="font-serif text-2xl font-bold text-white leading-tight">Esspee Square</h3>
+                <p id="modal-project-location" class="text-xs text-slate-400">Borivali East, Mumbai</p>
+            </div>
+
+            <!-- Metrics Grid -->
+            <div class="grid grid-cols-2 gap-4 bg-obsidian-950 p-4 rounded-xl border border-obsidian-800 text-xs">
+                <div>
+                    <span class="text-slate-500 block">Baseline Valuation</span>
+                    <span id="modal-project-valuation" class="font-bold text-white text-sm">₹91.55 Lacs Onwards</span>
+                </div>
+                <div>
+                    <span class="text-slate-500 block">Construction Phase</span>
+                    <span id="modal-project-status" class="font-bold text-gold-400 text-sm">Under Construction</span>
+                </div>
+            </div>
+
+            <!-- Technical Specification Block -->
+            <div class="space-y-2">
+                <h4 class="text-xs font-bold text-white uppercase tracking-wider">Premium Structural Engineering Specs</h4>
+                <p id="modal-project-specs" class="text-xs text-slate-400 leading-relaxed">
+                    Double height grand air-conditioned entrance lobby, structure certified under earthquake seismic guidelines zone-4, luxury premium vitrified tiling, multi-tier intercom fire fighting security systems.
+                </p>
+            </div>
+
+            <!-- Modal CTA -->
+            <div class="pt-4 flex gap-3">
+                <button onclick="closeProjectModalAndInquire()" class="w-full py-3 bg-gold-500 hover:bg-gold-600 text-obsidian-950 font-bold text-xs rounded-lg uppercase tracking-wider transition-all duration-300">
+                    Acquire Structural Specification Sheet
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Front-End Code Interactions -->
+    <script>
+        // Start Lucide Icons replacements
+        lucide.createIcons();
+
+        // Mobile Menu Toggling
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menuIcon.setAttribute('data-lucide', 'x');
+            } else {
+                menu.classList.add('hidden');
+                menuIcon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        }
+
+        // Project Filter Tab Controls
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.project-tab-btn');
+
+            // Set button styles
+            buttons.forEach(btn => {
+                if (btn.innerText.toLowerCase().includes(category) || (category === 'all' && btn.innerText.toLowerCase().includes('all'))) {
+                    btn.className = "project-tab-btn px-5 py-2 rounded-full text-xs font-bold tracking-wider uppercase border border-gold-500 bg-gold-500 text-obsidian-950 transition-all duration-300";
+                } else {
+                    btn.className = "project-tab-btn px-5 py-2 rounded-full text-xs font-bold tracking-wider uppercase border border-obsidian-800 text-slate-400 hover:border-gold-500 hover:text-white transition-all duration-300";
+                }
+            });
+
+            // Show / Hide projects
+            cards.forEach(card => {
+                const itemCat = card.getAttribute('data-category');
+                if (category === 'all' || itemCat.includes(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Real-Time Mortgage Calculation Formulas
+        function calculateMortgage() {
+            const propertyPrice = parseFloat(document.getElementById('input-property').value);
+            const downpaymentPercent = parseFloat(document.getElementById('input-downpayment').value);
+            const loanTermYears = parseFloat(document.getElementById('input-term').value);
+            const annualInterestRate = parseFloat(document.getElementById('input-rate').value);
+
+            // Calculate exact Downpayment Value
+            const downpaymentAmount = propertyPrice * (downpaymentPercent / 100);
+            const principalAmount = propertyPrice - downpaymentAmount;
+
+            // Formatted string options
+            const formattedProperty = propertyPrice.toLocaleString('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 });
+            const formattedDownpayment = downpaymentAmount.toLocaleString('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 });
+            
+            // Render text displays
+            document.getElementById('val-property-display').innerText = formattedProperty;
+            document.getElementById('val-downpayment-display').innerText = `${downpaymentPercent}% (${formattedDownpayment})`;
+            document.getElementById('val-term-display').innerText = `${loanTermYears} Years`;
+            document.getElementById('val-rate-display').innerText = `${annualInterestRate}%`;
+
+            // Calculate EMI (Standard Amortization Formula)
+            const monthlyRate = (annualInterestRate / 100) / 12;
+            const totalPayments = loanTermYears * 12;
+            
+            let monthlyEMI = 0;
+            if (monthlyRate > 0) {
+                monthlyEMI = (principalAmount * monthlyRate * Math.pow(1 + monthlyRate, totalPayments)) / (Math.pow(1 + monthlyRate, totalPayments) - 1);
+            } else {
+                monthlyEMI = principalAmount / totalPayments;
+            }
+
+            const totalPayableAmount = monthlyEMI * totalPayments;
+            const totalInterestPayable = totalPayableAmount - principalAmount;
+
+            // Display results nicely formatted
+            document.getElementById('out-principal').innerText = principalAmount.toLocaleString('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 });
+            document.getElementById('out-interest').innerText = totalInterestPayable.toLocaleString('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 });
+            document.getElementById('out-emi').innerText = monthlyEMI.toLocaleString('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 });
+        }
+
+        // Testimonial Navigation Carousel Logic
+        let currentTestimonialIndex = 0;
+        const totalTestimonials = 3;
+
+        function updateTestimonialSlider() {
+            const track = document.getElementById('testimonial-slider-track');
+            const dots = document.getElementById('slider-dots').children;
+            
+            track.style.transform = `translateX(-${currentTestimonialIndex * 100}%)`;
+            
+            // Highlight active navigation indicator dot
+            for (let i = 0; i < dots.length; i++) {
+                if (i === currentTestimonialIndex) {
+                    dots[i].className = "w-2.5 h-2.5 rounded-full bg-gold-500 cursor-pointer";
+                } else {
+                    dots[i].className = "w-2.5 h-2.5 rounded-full bg-obsidian-800 cursor-pointer";
+                }
+            }
+        }
+
+        function nextTestimonial() {
+            currentTestimonialIndex = (currentTestimonialIndex + 1) % totalTestimonials;
+            updateTestimonialSlider();
+        }
+
+        function prevTestimonial() {
+            currentTestimonialIndex = (currentTestimonialIndex - 1 + totalTestimonials) % totalTestimonials;
+            updateTestimonialSlider();
+        }
+
+        function setTestimonial(index) {
+            currentTestimonialIndex = index;
+            updateTestimonialSlider();
+        }
+
+        // Action: Quick Mortgage unlock
+        function unlockMortgageReport() {
+            const formNameInput = document.getElementById('form-name');
+            const targetSection = document.getElementById('contact');
+
+            // Scroll down to contact section to complete details
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+            formNameInput.focus();
+            
+            // Show responsive feedback
+            showNotification('Fill in details below to unlock personalized mortgage PDF schedules instantly!', 'success');
+        }
+
+        // Technical Spec Sheet Modal View Controls
+        function openProjectModal(title, location, category, valuation, status, specs) {
+            document.getElementById('modal-project-title').innerText = title;
+            document.getElementById('modal-project-location').innerText = location;
+            document.getElementById('modal-project-category').innerText = category;
+            document.getElementById('modal-project-valuation').innerText = valuation;
+            document.getElementById('modal-project-status').innerText = status;
+            document.getElementById('modal-project-specs').innerText = specs;
+
+            const modal = document.getElementById('project-detail-modal');
+            modal.classList.remove('hidden');
+        }
+
+        function closeProjectModal() {
+            const modal = document.getElementById('project-detail-modal');
+            modal.classList.add('hidden');
+        }
+
+        function closeProjectModalAndInquire() {
+            closeProjectModal();
+            const targetProj = document.getElementById('modal-project-title').innerText;
+            
+            // Set value in contact select option
+            const selectProj = document.getElementById('form-project');
+            for(let option of selectProj.options) {
+                if(option.text.includes(targetProj)) {
+                    selectProj.value = option.value;
+                    break;
+                }
+            }
+
+            // Scroll down directly to scheduling layout
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('form-name').focus();
+        }
+
+        // Client Booking Form Submission Action handler (Zero Alerts)
+        function handleFormSubmission(event) {
+            event.preventDefault();
+            
+            const clientName = document.getElementById('form-name').value;
+            const clientEmail = document.getElementById('form-email').value;
+            const selectedProject = document.getElementById('form-project').value;
+            
+            // Show successful custom alert layout
+            showNotification(`Thank you ${clientName}! Our Relationship Director has reserved standard slots for "${selectedProject}". A premium brochure has been dispatched to ${clientEmail}.`, 'success');
+            
+            // Clear fields nicely
+            document.getElementById('bookingForm').reset();
+        }
+
+        // Newsletter subscription simulator
+        function subscribeNewsletter() {
+            const newsletterEmail = document.getElementById('newsletter-email').value;
+            if (!newsletterEmail) {
+                showNotification('Kindly supply a valid email address to join.', 'error');
+                return;
+            }
+            showNotification(`Congratulations! ${newsletterEmail} has been added to our VIP pre-launch list. Check your inbox.`, 'success');
+            document.getElementById('newsletter-email').value = "";
+        }
+
+        // Helper Notification Drawer Layout (Alert replacement)
+        function showNotification(message, status) {
+            const notification = document.getElementById('status-notification');
+            const icon = document.getElementById('status-icon');
+            const textElement = document.getElementById('status-message');
+
+            notification.classList.remove('hidden');
+
+            if (status === 'success') {
+                notification.className = "mt-6 p-4 rounded-xl border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 flex items-center gap-3";
+                icon.className = "w-5 h-5 text-emerald-400";
+                icon.setAttribute('data-lucide', 'check-circle');
+            } else {
+                notification.className = "mt-6 p-4 rounded-xl border border-red-500/30 bg-red-500/10 text-red-400 flex items-center gap-3";
+                icon.className = "w-5 h-5 text-red-400";
+                icon.setAttribute('data-lucide', 'alert-circle');
+            }
+            
+            textElement.innerText = message;
+            lucide.createIcons();
+
+            // Auto fade out notification drawer after 9 seconds
+            setTimeout(() => {
+                notification.classList.add('hidden');
+            }, 9000);
+        }
+
+        // Initial setup on layout load
+        window.onload = function () {
+            calculateMortgage();
+        };
+    </script>
+</body>
+</html>

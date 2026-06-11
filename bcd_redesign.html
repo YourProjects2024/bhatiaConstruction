@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhatia Construction & Developers | Redesign Concept</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        construction: {
+                            bg: '#0F1115',
+                            card: '#161920',
+                            accent: '#F59E0B', // Premium Amber Gold
+                            accentHover: '#D97706',
+                            textMuted: '#94A3B8',
+                            slateDark: '#1E293B'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Modern Glassmorphism & Custom Animations */
+        .glass-header {
+            background: rgba(15, 17, 21, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        
+        .bento-card {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .bento-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(245, 158, 11, 0.4);
+            box-shadow: 0 20px 40px -15px rgba(245, 158, 11, 0.1);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 20px rgba(245, 158, 11, 0.2);
+        }
+
+        /* Smooth custom scrolls */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0F1115;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #272B35;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #F59E0B;
+        }
+    </style>
+</head>
+<body class="bg-[#0A0C10] text-gray-100 font-sans antialiased overflow-x-hidden">
+
+    <!-- NAVIGATION BAR -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-header transition-all duration-300" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Sleek Architectural Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 bg-gradient-to-tr from-construction-accent to-yellow-300 rounded-lg flex items-center justify-center shadow-lg shadow-construction-accent/20 group-hover:scale-105 transition-transform duration-300">
+                    <span class="text-slate-900 font-black text-xl tracking-tighter">BCD</span>
+                </div>
+                <div>
+                    <span class="block text-sm font-black uppercase tracking-[0.2em] text-white">Bhatia</span>
+                    <span class="block text-[10px] text-construction-accent uppercase tracking-[0.15em] -mt-1 font-semibold">Construction & Developers</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="#home" class="text-sm font-semibold text-construction-accent hover:text-white transition-colors duration-200">Home</a>
+                <a href="#services" class="text-sm font-semibold text-gray-300 hover:text-construction-accent transition-colors duration-200">Services</a>
+                <a href="#about" class="text-sm font-semibold text-gray-300 hover:text-construction-accent transition-colors duration-200">About</a>
+                <a href="#projects" class="text-sm font-semibold text-gray-300 hover:text-construction-accent transition-colors duration-200">Projects</a>
+                <a href="#careers" class="text-sm font-semibold text-gray-300 hover:text-construction-accent transition-colors duration-200">Careers</a>
+                <a href="#team" class="text-sm font-semibold text-gray-300 hover:text-construction-accent transition-colors duration-200">Our Heroes</a>
+                <a href="#contact" class="text-sm font-semibold text-gray-300 hover:text-construction-accent transition-colors duration-200">Contact</a>
+            </nav>
+
+            <!-- Social Links & Button -->
+            <div class="hidden xl:flex items-center gap-5">
+                <div class="flex items-center gap-3 text-construction-textMuted border-r border-white/10 pr-5">
+                    <a href="tel:+919876543210" class="hover:text-construction-accent transition-colors" title="Call Us"><i class="fa-solid fa-phone text-xs"></i></a>
+                    <a href="#" class="hover:text-construction-accent transition-colors" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="mailto:info@bhatiaconstruction.com" class="hover:text-construction-accent transition-colors" title="Email"><i class="fa-regular fa-envelope"></i></a>
+                    <a href="#" class="hover:text-construction-accent transition-colors" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <a href="#contact" class="px-5 py-2.5 bg-construction-accent hover:bg-construction-accentHover text-slate-900 text-xs font-extrabold uppercase tracking-widest rounded-md transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-construction-accent/20">
+                    Get Free Quote
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Menu Button -->
+            <button class="lg:hidden p-2 rounded-md hover:bg-white/5 text-gray-300" id="mobileMenuBtn">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Side Navigation Drawer -->
+        <div id="mobileDrawer" class="hidden fixed top-20 left-0 w-full bg-[#0F1115] border-b border-white/10 p-6 flex flex-col gap-4 animate-fade-in lg:hidden">
+            <a href="#home" class="text-lg font-medium text-construction-accent py-2">Home</a>
+            <a href="#services" class="text-lg font-medium text-gray-300 py-2">Services</a>
+            <a href="#about" class="text-lg font-medium text-gray-300 py-2">About</a>
+            <a href="#projects" class="text-lg font-medium text-gray-300 py-2">Projects</a>
+            <a href="#careers" class="text-lg font-medium text-gray-300 py-2">Careers</a>
+            <a href="#team" class="text-lg font-medium text-gray-300 py-2">Our Heroes</a>
+            <a href="#contact" class="text-lg font-medium text-gray-300 py-2">Contact</a>
+            <div class="flex items-center gap-4 mt-4 pt-4 border-t border-white/10">
+                <a href="#contact" class="w-full text-center py-3 bg-construction-accent text-slate-900 font-bold rounded-lg">Get Free Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
+        <!-- Visual Background Layer: Dynamic Abstract Blueprint Blueprint Grid -->
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(245,158,11,0.08),rgba(0,0,0,0))]"></div>
+        <div class="absolute inset-0 opacity-10 bg-[linear-gradient(rgba(255,255,255,.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.05)_1px,transparent_1px)] bg-[size:100px_100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 py-16 grid lg:grid-cols-12 gap-12 items-center">
+            <!-- Hero Left Side Content -->
+            <div class="lg:col-span-7 flex flex-col justify-center text-center lg:text-left space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-white/5 border border-white/10 rounded-full w-fit mx-auto lg:mx-0">
+                    <span class="w-2 h-2 rounded-full bg-construction-accent animate-ping"></span>
+                    <span class="text-[11px] font-bold uppercase tracking-wider text-construction-accent">Redesign Concept & Premium UI Pitch</span>
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-none text-white font-serif">
+                    Building <span class="text-transparent bg-clip-text bg-gradient-to-r from-construction-accent via-yellow-400 to-amber-500 text-glow">Legacies</span>,<br>
+                    Crafting Reality
+                </h1>
+                
+                <p class="text-base sm:text-lg text-construction-textMuted max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                    Transforming your visions into robust physical marvels. We construct state-of-the-art residential, commercial, and national infrastructure projects with meticulous attention to safety, time, and detail.
+                </p>
+
+                <!-- Responsive Quick Actions -->
+                <div class="flex flex-col sm:flex-row items-center gap-4 pt-4 justify-center lg:justify-start">
+                    <a href="#projects" class="w-full sm:w-auto px-8 py-4 bg-construction-accent hover:bg-construction-accentHover text-slate-900 font-extrabold uppercase tracking-wider text-xs rounded-lg transition-all duration-300 flex items-center justify-center gap-2 group shadow-xl shadow-construction-accent/15">
+                        Explore Our Work
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="#services" class="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-bold tracking-wide text-xs rounded-lg transition-all duration-300 border border-white/10 flex items-center justify-center gap-2">
+                        Our Services
+                    </a>
+                </div>
+
+                <!-- Live Project Status Counters -->
+                <div class="grid grid-cols-3 gap-6 pt-10 border-t border-white/10 max-w-lg mx-auto lg:mx-0">
+                    <div>
+                        <span class="block text-2xl sm:text-3xl font-black text-white">15+</span>
+                        <span class="text-[11px] text-construction-textMuted uppercase tracking-wider">Years Active</span>
+                    </div>
+                    <div>
+                        <span class="block text-2xl sm:text-3xl font-black text-construction-accent">250+</span>
+                        <span class="text-[11px] text-construction-textMuted uppercase tracking-wider">Completed Projects</span>
+                    </div>
+                    <div>
+                        <span class="block text-2xl sm:text-3xl font-black text-white">99%</span>
+                        <span class="text-[11px] text-construction-textMuted uppercase tracking-wider">On-Time Delivery</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Right Side Immersive Card Overlay -->
+            <div class="lg:col-span-5 relative flex items-center justify-center">
+                <div class="absolute -inset-4 bg-gradient-to-r from-construction-accent to-yellow-600 rounded-2xl blur-3xl opacity-10 pointer-events-none"></div>
+                
+                <!-- Redesigned Hero Box Grid showing Premium Workmanship aesthetics -->
+                <div class="relative bg-construction-card border border-white/10 rounded-2xl p-6 w-full max-w-md shadow-2xl overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-construction-accent to-yellow-500"></div>
+                    
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-construction-accent">Live Project Feature</span>
+                        <span class="px-2.5 py-0.5 bg-green-500/10 text-green-400 text-[9px] font-bold uppercase rounded-full">In Progress</span>
+                    </div>
+
+                    <!-- Clean Mock Image Showcase using custom generated high fidelity gradient cards -->
+                    <div class="w-full h-48 rounded-xl bg-gradient-to-br from-slate-800 to-slate-900 border border-white/5 relative overflow-hidden flex items-center justify-center mb-5">
+                        <div class="absolute inset-0 bg-cover bg-center mix-blend-overlay opacity-60" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80')"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
+                        
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <span class="text-[10px] font-bold text-construction-accent uppercase tracking-wider">IIT Mandi Project</span>
+                            <h3 class="text-sm font-bold text-white">Boys Hostel Construction Block</h3>
+                        </div>
+                    </div>
+
+                    <!-- Client Testimonial Overlay inside Hero -->
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3 bg-white/5 p-3.5 rounded-xl border border-white/5">
+                            <div class="w-8 h-8 rounded-full bg-construction-accent flex items-center justify-center text-slate-950 font-bold text-xs shrink-0">
+                                <i class="fa-solid fa-quote-left"></i>
+                            </div>
+                            <p class="text-xs text-gray-300 italic">
+                                "Outstanding delivery on challenging topography. BCD has proven themselves to be elite executors."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STORY & CEO SECTION -->
+    <section id="about" class="py-24 relative border-t border-white/5 bg-[#0C0E13]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-16 items-center">
+                <!-- Our Story Redesigned Side Cards -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="space-y-2">
+                        <span class="text-xs font-bold uppercase tracking-widest text-construction-accent">Company Heritage</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold font-serif">Building Trust Layer by Layer</h2>
+                    </div>
+                    
+                    <p class="text-construction-textMuted leading-relaxed">
+                        Bhatia Construction and Developers is built on a simple, powerful idea: create durable, beautiful, and precise structures that community leaders and clients can trust for generations. We manage every component of architectural, structural planning, and site layout work.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="p-4 bg-construction-card border border-white/5 rounded-xl flex items-start gap-3">
+                            <i class="fa-solid fa-bullseye text-construction-accent mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-sm text-white">Our Mission</h4>
+                                <p class="text-xs text-construction-textMuted mt-1">Deliver safe, cost-efficient, high-precision projects on time.</p>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-construction-card border border-white/5 rounded-xl flex items-start gap-3">
+                            <i class="fa-solid fa-eye text-construction-accent mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-sm text-white">Our Vision</h4>
+                                <p class="text-xs text-construction-textMuted mt-1">Be the premier trusted infrastructure development partner nationwide.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CEO Message Grid layout (Resolving generic templates) -->
+                <div class="lg:col-span-6 relative bg-construction-card border border-white/10 rounded-2xl p-8 shadow-2xl">
+                    <div class="absolute -top-6 -right-6 w-32 h-32 bg-construction-accent/5 rounded-full blur-2xl pointer-events-none"></div>
+                    
+                    <div class="flex flex-col sm:flex-row items-center gap-6 mb-6">
+                        <!-- Redesigned Portrait Block -->
+                        <div class="relative w-24 h-24 rounded-2xl overflow-hidden bg-slate-800 shrink-0 border-2 border-construction-accent shadow-lg">
+                            <!-- Clean SVG portrait representation for CEO to maintain perfect visual fidelity -->
+                            <svg class="w-full h-full text-slate-600 bg-slate-900" viewBox="0 0 100 100" fill="currentColor">
+                                <rect width="100" height="100" fill="#1e293b"/>
+                                <circle cx="50" cy="40" r="22" fill="#94a3b8"/>
+                                <path d="M50 68c-25 0-35 15-35 22h70c0-7-10-22-35-22z" fill="#f59e0b"/>
+                                <rect x="42" y="55" width="16" height="14" rx="2" fill="#e2e8f0"/>
+                            </svg>
+                        </div>
+                        
+                        <div>
+                            <span class="px-2.5 py-1 bg-construction-accent/10 text-construction-accent text-[9px] font-extrabold uppercase tracking-widest rounded-md">Leadership Statement</span>
+                            <h3 class="text-xl font-bold text-white mt-1.5">Deepak Bhatia</h3>
+                            <p class="text-xs text-construction-textMuted">Founder & CEO, Bhatia Construction and Developers</p>
+                        </div>
+                    </div>
+
+                    <blockquote class="text-sm text-gray-300 italic leading-relaxed relative">
+                        <i class="fa-solid fa-quote-left text-3xl text-construction-accent/10 absolute -top-4 -left-2"></i>
+                        "My singular focus is simple: to construct with absolute transparency, implement gold-standard safety parameters, and establish spaces that make communities proud. At BCD, we do not simply configure buildings; we engineer long-term trust."
+                    </blockquote>
+
+                    <!-- Redesigned Micro Badge details -->
+                    <div class="mt-6 pt-5 border-t border-white/5 flex flex-wrap gap-4 items-center justify-between">
+                        <span class="text-xs font-semibold text-construction-accent">DEEPAK BHATIA — CEO & FOUNDER</span>
+                        <div class="flex items-center gap-1.5">
+                            <i class="fa-solid fa-medal text-construction-accent"></i>
+                            <span class="text-[10px] text-white uppercase font-extrabold tracking-wider">Quality First ISO Approved</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-24 relative bg-[#0F1115]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-3 mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-construction-accent">Execution Capability</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-serif text-white">Architectural & Construction Services</h2>
+                <p class="text-sm text-construction-textMuted max-w-2xl mx-auto">
+                    We bring top-tier engineering precision, systematic budget estimation, and turnkey project coordination under one single cohesive roof.
+                </p>
+            </div>
+
+            <!-- Sleek Bento Grid Services layout with dynamic actions -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bento-card bg-construction-card border border-white/5 p-6 rounded-2xl relative flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-construction-accent/10 rounded-xl flex items-center justify-center text-construction-accent">
+                            <i class="fa-solid fa-trowel-bricks text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Residential Construction</h3>
+                        <p class="text-xs text-construction-textMuted leading-relaxed">
+                            Elite residential homes configured from raw blueprint phases to detailed finishings, customized to custom client goals.
+                        </p>
+                    </div>
+                    <a href="#contact" class="mt-6 flex items-center gap-2 text-xs font-bold text-construction-accent hover:text-white transition-colors">
+                        Book Consultation <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 2: Interactive Pricing Calculator Hook -->
+                <div class="bento-card bg-construction-card border border-white/5 p-6 rounded-2xl relative flex flex-col justify-between border-construction-accent/30 shadow-lg shadow-construction-accent/[0.02]">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="w-12 h-12 bg-construction-accent/10 rounded-xl flex items-center justify-center text-construction-accent">
+                                <i class="fa-solid fa-calculator text-xl"></i>
+                            </div>
+                            <span class="px-2 py-0.5 bg-construction-accent/10 text-construction-accent text-[9px] font-bold uppercase tracking-wide rounded">Interactive App</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Estimation & Costing</h3>
+                        <p class="text-xs text-construction-textMuted leading-relaxed">
+                            Don't guess budgets. Play with our live rough model estimation calculator tool built right in for transparency.
+                        </p>
+                        
+                        <!-- Mini Interactive Budget Applet Inside -->
+                        <div class="bg-[#0A0C10] p-3 rounded-lg border border-white/5 space-y-2.5">
+                            <div class="flex justify-between items-center text-[10px]">
+                                <span class="text-gray-400">Project Area (Sq.Ft.)</span>
+                                <span class="text-white font-bold" id="areaValue">1,500</span>
+                            </div>
+                            <input type="range" id="areaRange" min="500" max="10000" step="100" value="1500" class="w-full accent-construction-accent bg-slate-800 h-1 rounded-lg cursor-pointer">
+                            
+                            <div class="flex justify-between items-center text-[10px]">
+                                <span class="text-gray-400">Execution Type</span>
+                                <select id="calcType" class="bg-construction-card text-white border border-white/10 rounded px-1 py-0.5 outline-none text-[10px]">
+                                    <option value="standard">Standard Structure</option>
+                                    <option value="premium">Premium Architectural</option>
+                                </select>
+                            </div>
+                            <div class="border-t border-white/5 pt-2 flex justify-between items-center">
+                                <span class="text-[9px] text-construction-accent uppercase font-bold tracking-wider">Est. Cost Range:</span>
+                                <span class="text-xs text-white font-black" id="calcResult">₹22.5L - ₹27.0L</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bento-card bg-construction-card border border-white/5 p-6 rounded-2xl relative flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-construction-accent/10 rounded-xl flex items-center justify-center text-construction-accent">
+                            <i class="fa-solid fa-key text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Turnkey Project Execution</h3>
+                        <p class="text-xs text-construction-textMuted leading-relaxed">
+                            Full planning, execution, logistics handling, supply tracking, and complete structural handovers made seamless.
+                        </p>
+                    </div>
+                    <a href="#contact" class="mt-6 flex items-center gap-2 text-xs font-bold text-construction-accent hover:text-white transition-colors">
+                        Learn Protocols <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="bento-card bg-construction-card border border-white/5 p-6 rounded-2xl relative flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-construction-accent/10 rounded-xl flex items-center justify-center text-construction-accent">
+                            <i class="fa-solid fa-compass-drafting text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Architectural Design</h3>
+                        <p class="text-xs text-construction-textMuted leading-relaxed">
+                            Elegant, structural layouts, ergonomic spatial layouts, and premium aesthetic visualizations tailored to maximize space.
+                        </p>
+                    </div>
+                    <a href="#contact" class="mt-6 flex items-center gap-2 text-xs font-bold text-construction-accent hover:text-white transition-colors">
+                        View Blueprints <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="bento-card bg-construction-card border border-white/5 p-6 rounded-2xl relative flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-construction-accent/10 rounded-xl flex items-center justify-center text-construction-accent">
+                            <i class="fa-solid fa-bezier-curve text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Structural Engineering</h3>
+                        <p class="text-xs text-construction-textMuted leading-relaxed">
+                            Precision mechanical analytics, concrete and structural reinforcement engineering for durable load-bearing security.
+                        </p>
+                    </div>
+                    <a href="#contact" class="mt-6 flex items-center gap-2 text-xs font-bold text-construction-accent hover:text-white transition-colors">
+                        Verify Standards <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="bento-card bg-construction-card border border-white/5 p-6 rounded-2xl relative flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-construction-accent/10 rounded-xl flex items-center justify-center text-construction-accent">
+                            <i class="fa-solid fa-couch text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Interior Design & Execution</h3>
+                        <p class="text-xs text-construction-textMuted leading-relaxed">
+                            Bespoke space management, architectural carpentry, ambient layout modeling, and visual styling for custom assets.
+                        </p>
+                    </div>
+                    <a href="#contact" class="mt-6 flex items-center gap-2 text-xs font-bold text-construction-accent hover:text-white transition-colors">
+                        View Interiors <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="py-24 relative bg-[#0C0E13] border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div class="space-y-3">
+                    <span class="text-xs font-bold uppercase tracking-widest text-construction-accent">Portfolio Showcase</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold font-serif text-white">Our Masterpiece Infrastructures</h2>
+                    <p class="text-sm text-construction-textMuted max-w-xl">
+                        Delivering heavy civil, architectural, and government infrastructure projects across strategic locations.
+                    </p>
+                </div>
+
+                <!-- Premium Filter Switcher (Replaces simple page redirections) -->
+                <div class="flex flex-wrap gap-2.5 bg-construction-card p-1.5 rounded-xl border border-white/5 w-fit">
+                    <button onclick="filterProjects('all')" id="btn-all" class="proj-filter-btn px-4 py-2 text-xs font-bold tracking-wide rounded-lg transition-all duration-300 bg-construction-accent text-slate-950">
+                        All Works
+                    </button>
+                    <button onclick="filterProjects('residential')" id="btn-residential" class="proj-filter-btn px-4 py-2 text-xs font-bold tracking-wide rounded-lg transition-all duration-300 text-construction-textMuted hover:text-white">
+                        Residential
+                    </button>
+                    <button onclick="filterProjects('infrastructure')" id="btn-infrastructure" class="proj-filter-btn px-4 py-2 text-xs font-bold tracking-wide rounded-lg transition-all duration-300 text-construction-textMuted hover:text-white">
+                        Infrastructure
+                    </button>
+                    <button onclick="filterProjects('commercial')" id="btn-commercial" class="proj-filter-btn px-4 py-2 text-xs font-bold tracking-wide rounded-lg transition-all duration-300 text-construction-textMuted hover:text-white">
+                        Commercial
+                    </button>
+                </div>
+            </div>
+
+            <!-- Redesigned Projects Grid (Replaces plain blue text blocks) -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projectsGrid">
+                <!-- Project Card 1: IIT Mandi -->
+                <div class="project-card group bg-construction-card border border-white/5 rounded-2xl overflow-hidden transition-all duration-300 hover:border-construction-accent/30" data-category="infrastructure">
+                    <div class="h-56 relative overflow-hidden bg-slate-900">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=600&q=80')"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
+                        <span class="absolute top-4 left-4 px-3 py-1 bg-construction-accent text-slate-900 text-[9px] font-black uppercase tracking-wider rounded-md">Completed</span>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-center gap-2 text-xs text-construction-accent">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Mandi, Himachal Pradesh</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-construction-accent transition-colors">IIT MANDI – Boys Hostel</h3>
+                        <p class="text-xs text-construction-textMuted leading-relaxed">
+                            Structural construction, finishing layout, plumbing coordination, electrical compliance, and safety parameters engineered elegantly inside the main campus block.
+                        </p>
+                        <div class="pt-4 border-t border-white/5 flex items-center justify-between text-[11px] text-gray-400">
+                            <span>Scale: 400+ Units Capacity</span>
+                            <span class="font-bold text-white">Govt Sector</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: Kalsi Brothers -->
+                <div class="project-card group bg-construction-card border border-white/5 rounded-2xl overflow-hidden transition-all duration-300 hover:border-construction-accent/30" data-category="commercial">
+                    <div class="h-56 relative overflow-hidden bg-slate-900">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80')"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
+                        <span class="absolute top-4 left-4 px-3 py-1 bg-construction-accent text-slate-900 text-[9px] font-black uppercase tracking-wider rounded-md">Completed</span>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-center gap-2 text-xs text-construction-accent">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Shimla, Himachal Pradesh</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-construction-accent transition-colors">KALSI BROTHERS – Parking Block</h3>
+                        <p class="text-xs text-construction-textMuted leading-relaxed">
+                            Development of high-capacity structural auditorium and multi-level modern vehicular parking system for SJVN, customized to complex high-altitude parameters.
+                        </p>
+                        <div class="pt-4 border-t border-white/5 flex items-center justify-between text-[11px] text-gray-400">
+                            <span>Scale: Multi-level Parking</span>
+                            <span class="font-bold text-white">Commercial</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3: RR Builders -->
+                <div class="project-card group bg-construction-card border border-white/5 rounded-2xl overflow-hidden transition-all duration-300 hover:border-construction-accent/30" data-category="infrastructure">
+                    <div class="h-56 relative overflow-hidden bg-slate-900">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=600&q=80')"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
+                        <span class="absolute top-4 left-4 px-3 py-1 bg-construction-accent text-slate-900 text-[9px] font-black uppercase tracking-wider rounded-md">Active</span>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-center gap-2 text-xs text-construction-accent">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Nangal, Punjab</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-construction-accent transition-colors">RR BUILDERS – Road Widening</h3>
+                        <p class="text-xs text-construction-textMuted leading-relaxed">
+                            Excavation, specialized leveling, sophisticated rainwater drainage system development, and heavy industrial asphalt laying ensuring high-durability transit routes.
+                        </p>
+                        <div class="pt-4 border-t border-white/5 flex items-center justify-between text-[11px] text-gray-400">
+                            <span>Scale: 12KM Transit Layout</span>
+                            <span class="font-bold text-white">Infrastructure</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAREERS SECTION -->
+    <section id="careers" class="py-24 relative bg-[#0F1115]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <!-- Text elements -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="space-y-2">
+                        <span class="text-xs font-bold uppercase tracking-widest text-construction-accent">Join Our Ranks</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold font-serif text-white">Let's Construct Your Future</h2>
+                    </div>
+                    <p class="text-sm text-construction-textMuted leading-relaxed">
+                        Become part of a highly disciplined, well-coordinated construction framework focused on absolute engineering excellence and safety execution. We actively hire structural talent, site managers, and executive engineers.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-construction-accent text-sm"></i>
+                            <span class="text-xs text-gray-300 font-semibold">Competitive Industry Standard Compensation Packages</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-construction-accent text-sm"></i>
+                            <span class="text-xs text-gray-300 font-semibold">Comprehensive Site Safety Guidelines & Protocols</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-construction-accent text-sm"></i>
+                            <span class="text-xs text-gray-300 font-semibold">Clear Upward Leadership Mobility Tracks</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Redesigned Career Card grids with active apply action -->
+                <div class="lg:col-span-7 grid sm:grid-cols-2 gap-6">
+                    <!-- Card 1 -->
+                    <div class="p-6 bg-construction-card border border-white/5 rounded-2xl flex flex-col justify-between space-y-6">
+                        <div class="space-y-3">
+                            <span class="px-2 py-0.5 bg-construction-accent/10 text-construction-accent text-[9px] font-bold uppercase rounded-md tracking-wider">Engineering Dept</span>
+                            <h3 class="text-base font-bold text-white">Senior Site Engineer</h3>
+                            <p class="text-xs text-construction-textMuted">Managing high-altitude concrete layout protocols and architectural blue-printing workflows.</p>
+                        </div>
+                        <button onclick="openApplyModal('Senior Site Engineer')" class="w-full text-center py-2.5 bg-white/5 hover:bg-construction-accent hover:text-slate-900 transition-all text-xs font-extrabold uppercase tracking-wider text-white rounded-lg">
+                            Apply Now
+                        </button>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="p-6 bg-construction-card border border-white/5 rounded-2xl flex flex-col justify-between space-y-6">
+                        <div class="space-y-3">
+                            <span class="px-2 py-0.5 bg-construction-accent/10 text-construction-accent text-[9px] font-bold uppercase rounded-md tracking-wider">Operations Dept</span>
+                            <h3 class="text-base font-bold text-white">Turnkey Logistics Manager</h3>
+                            <p class="text-xs text-construction-textMuted">Coordinating on-site cement supplies, structural iron shipments, and timeline tracking protocols.</p>
+                        </div>
+                        <button onclick="openApplyModal('Turnkey Logistics Manager')" class="w-full text-center py-2.5 bg-white/5 hover:bg-construction-accent hover:text-slate-900 transition-all text-xs font-extrabold uppercase tracking-wider text-white rounded-lg">
+                            Apply Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION ("OUR HEROES") -->
+    <section id="team" class="py-24 relative bg-[#0C0E13] border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-3 mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-construction-accent">The Brains Behind BCD</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-serif text-white">Meet Our Dedicated Leadership</h2>
+                <p class="text-sm text-construction-textMuted max-w-xl mx-auto">
+                    Highly skilled technical leaders executing state-of-the-art structural operations.
+                </p>
+            </div>
+
+            <!-- Team Layout: Perfectly structured, with verified single names and modern custom avatars (NO MORE BROKEN LINKS!) -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Member 1: Founder & CEO -->
+                <div class="bg-construction-card border border-white/5 rounded-2xl p-6 text-center space-y-4 group transition-all hover:border-construction-accent/30">
+                    <div class="w-28 h-28 mx-auto rounded-full overflow-hidden border-2 border-construction-accent/50 p-1 group-hover:scale-105 transition-transform duration-300">
+                        <svg class="w-full h-full text-slate-400 bg-slate-900 rounded-full" viewBox="0 0 100 100" fill="currentColor">
+                            <circle cx="50" cy="40" r="22" fill="#475569"/>
+                            <path d="M50 68c-20 0-30 12-30 18h60c0-6-10-18-30-18z" fill="#f59e0b"/>
+                        </svg>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="text-lg font-bold text-white">Er. Deepak Bhatia</h3>
+                        <p class="text-xs text-construction-accent uppercase font-bold tracking-wider">Founder & CEO</p>
+                    </div>
+                    <p class="text-xs text-construction-textMuted leading-relaxed">
+                        Leads strategic government infrastructure liaisoning and key spatial project approvals.
+                    </p>
+                </div>
+
+                <!-- Member 2: Finance & IT Management Head -->
+                <div class="bg-construction-card border border-white/5 rounded-2xl p-6 text-center space-y-4 group transition-all hover:border-construction-accent/30">
+                    <div class="w-28 h-28 mx-auto rounded-full overflow-hidden border-2 border-white/10 p-1 group-hover:scale-105 transition-transform duration-300">
+                        <svg class="w-full h-full text-slate-400 bg-slate-900 rounded-full" viewBox="0 0 100 100" fill="currentColor">
+                            <circle cx="50" cy="40" r="22" fill="#334155"/>
+                            <path d="M50 68c-20 0-30 12-30 18h60c0-6-10-18-30-18z" fill="#94a3b8"/>
+                        </svg>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="text-lg font-bold text-white">MD Asgar Ali</h3>
+                        <p class="text-xs text-construction-accent uppercase font-bold tracking-wider">Finance & IT Management Head</p>
+                    </div>
+                    <p class="text-xs text-construction-textMuted leading-relaxed">
+                        Manages structural material cost planning, fiscal optimization matrices, and system networks.
+                    </p>
+                </div>
+
+                <!-- Member 3: Survey & Execution Head -->
+                <div class="bg-construction-card border border-white/5 rounded-2xl p-6 text-center space-y-4 group transition-all hover:border-construction-accent/30">
+                    <div class="w-28 h-28 mx-auto rounded-full overflow-hidden border-2 border-white/10 p-1 group-hover:scale-105 transition-transform duration-300">
+                        <svg class="w-full h-full text-slate-400 bg-slate-900 rounded-full" viewBox="0 0 100 100" fill="currentColor">
+                            <circle cx="50" cy="40" r="22" fill="#1e293b"/>
+                            <path d="M50 68c-20 0-30 12-30 18h60c0-6-10-18-30-18z" fill="#e2e8f0"/>
+                        </svg>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="text-lg font-bold text-white">Er. Banty Thakur</h3>
+                        <p class="text-xs text-construction-accent uppercase font-bold tracking-wider">Survey & Execution Head</p>
+                    </div>
+                    <p class="text-xs text-construction-textMuted leading-relaxed">
+                        Directly coordinates tactical topographic surveys and structural safety checkpoints.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 relative bg-[#0F1115]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-16 items-start">
+                <!-- Left Details Box -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div class="space-y-3">
+                        <span class="text-xs font-bold uppercase tracking-widest text-construction-accent">Get in Touch</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold font-serif text-white">Let's Construct Something Great</h2>
+                        <p class="text-sm text-construction-textMuted leading-relaxed">
+                            Reach out today to coordinate physical site visits, structural surveys, or estimate evaluations.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-construction-accent shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Headquarters</h4>
+                                <p class="text-xs text-construction-textMuted mt-1">Bhopal Main Office, Arera Hills, Bhopal, Madhya Pradesh, India</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-construction-accent shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Email Address</h4>
+                                <p class="text-xs text-construction-textMuted mt-1">info@bhatiaconstructionanddevelopers.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-construction-accent shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Hotline Support</h4>
+                                <p class="text-xs text-construction-textMuted mt-1">+91 94250 12345 / +91 755 4220000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Geolocation visualization replacing the stock model on phone -->
+                    <div class="bg-construction-card border border-white/5 rounded-2xl p-4 space-y-3">
+                        <span class="text-[10px] uppercase tracking-wider text-construction-accent font-bold">Local Focus Area</span>
+                        <div class="w-full h-40 bg-slate-900 rounded-xl relative overflow-hidden flex items-center justify-center">
+                            <div class="absolute inset-0 bg-cover bg-center mix-blend-overlay opacity-30" style="background-image: url('https://placehold.co/600x400/1e293b/a1a1aa?text=Interactive+Map+Bhopal')"></div>
+                            <div class="absolute text-center p-4">
+                                <i class="fa-solid fa-map-location-dot text-3xl text-construction-accent animate-bounce"></i>
+                                <span class="block text-[11px] font-bold text-white mt-2">Bhopal Office Location</span>
+                                <span class="block text-[9px] text-construction-textMuted">Serving India-wide construction scopes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Glassmorphism Form container -->
+                <div class="lg:col-span-7 bg-construction-card border border-white/10 rounded-2xl p-8 relative">
+                    <div class="absolute -top-12 -left-12 w-24 h-24 bg-construction-accent/5 rounded-full blur-2xl"></div>
+                    <h3 class="text-lg font-bold text-white mb-6">Submit Quote Request</h3>
+                    
+                    <form id="quoteForm" onsubmit="handleQuoteSubmit(event)" class="space-y-5">
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div class="space-y-2">
+                                <label class="text-[11px] uppercase font-bold tracking-wider text-construction-textMuted">Your Name</label>
+                                <input type="text" required class="w-full bg-[#0A0C10] border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:border-construction-accent focus:outline-none transition-colors" placeholder="e.g. Ramesh Kumar">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-[11px] uppercase font-bold tracking-wider text-construction-textMuted">Contact Number</label>
+                                <input type="tel" required class="w-full bg-[#0A0C10] border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:border-construction-accent focus:outline-none transition-colors" placeholder="e.g. +91 98765 43210">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-[11px] uppercase font-bold tracking-wider text-construction-textMuted">Email Address</label>
+                            <input type="email" required class="w-full bg-[#0A0C10] border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:border-construction-accent focus:outline-none transition-colors" placeholder="e.g. name@gmail.com">
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div class="space-y-2">
+                                <label class="text-[11px] uppercase font-bold tracking-wider text-construction-textMuted">Project Scope</label>
+                                <select class="w-full bg-[#0A0C10] border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:border-construction-accent focus:outline-none transition-colors">
+                                    <option>Residential Construction</option>
+                                    <option>Commercial Structural Work</option>
+                                    <option>Infrastructure Planning</option>
+                                    <option>Interior Renovation</option>
+                                </select>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-[11px] uppercase font-bold tracking-wider text-construction-textMuted">Est. Project Scale</label>
+                                <input type="text" class="w-full bg-[#0A0C10] border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:border-construction-accent focus:outline-none transition-colors" placeholder="e.g. 2,500 Sq. Ft.">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-[11px] uppercase font-bold tracking-wider text-construction-textMuted">Detailed Requirements</label>
+                            <textarea rows="4" required class="w-full bg-[#0A0C10] border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:border-construction-accent focus:outline-none transition-colors" placeholder="Mention architectural timeline parameters..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 bg-construction-accent hover:bg-construction-accentHover text-slate-900 font-extrabold uppercase tracking-widest text-xs rounded-lg transition-all shadow-xl shadow-construction-accent/10">
+                            Send Request Proposal
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#08090C] border-t border-white/10 py-16 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Branding column -->
+                <div class="space-y-5">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-construction-accent rounded-lg flex items-center justify-center font-black text-slate-950 text-lg">
+                            BCD
+                        </div>
+                        <span class="font-serif font-bold text-white text-lg">Bhatia Construction</span>
+                    </div>
+                    <p class="text-xs text-construction-textMuted leading-relaxed">
+                        Redefining infrastructural parameters across central India with high-precision workflows, on-site safety, and comprehensive materials vetting.
+                    </p>
+                </div>
+
+                <!-- Fast Links -->
+                <div class="space-y-4">
+                    <h4 class="text-xs font-black uppercase tracking-wider text-white">Our Scope</h4>
+                    <ul class="space-y-2 text-xs text-construction-textMuted">
+                        <li><a href="#services" class="hover:text-construction-accent transition-colors">Residential Execution</a></li>
+                        <li><a href="#services" class="hover:text-construction-accent transition-colors">Estimation Calculations</a></li>
+                        <li><a href="#services" class="hover:text-construction-accent transition-colors">Turnkey Coordination</a></li>
+                        <li><a href="#services" class="hover:text-construction-accent transition-colors">Structural Civil Engineering</a></li>
+                    </ul>
+                </div>
+
+                <!-- Safety Protocol standards badge list -->
+                <div class="space-y-4">
+                    <h4 class="text-xs font-black uppercase tracking-wider text-white">Compliance</h4>
+                    <div class="space-y-2.5">
+                        <div class="flex items-center gap-2 text-xs text-construction-textMuted">
+                            <i class="fa-solid fa-circle text-[6px] text-construction-accent"></i>
+                            <span>ISO 9001:2015 Approved</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-xs text-construction-textMuted">
+                            <i class="fa-solid fa-circle text-[6px] text-construction-accent"></i>
+                            <span>PWD Government Enrolled Class-A</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-xs text-construction-textMuted">
+                            <i class="fa-solid fa-circle text-[6px] text-construction-accent"></i>
+                            <span>Z-Category Safety Compliant</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Direct Social contact details -->
+                <div class="space-y-4">
+                    <h4 class="text-xs font-black uppercase tracking-wider text-white">Connect Safely</h4>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-9 h-9 bg-white/5 hover:bg-construction-accent hover:text-slate-950 rounded-lg flex items-center justify-center text-gray-300 transition-colors">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-white/5 hover:bg-construction-accent hover:text-slate-950 rounded-lg flex items-center justify-center text-gray-300 transition-colors">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-white/5 hover:bg-construction-accent hover:text-slate-950 rounded-lg flex items-center justify-center text-gray-300 transition-colors">
+                            <i class="fa-regular fa-envelope"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-white/5 hover:bg-construction-accent hover:text-slate-950 rounded-lg flex items-center justify-center text-gray-300 transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-construction-textMuted">
+                <p>&copy; 2026 Bhatia Construction and Developers. Redesign Pitch Concept. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white">Privacy Standard</a>
+                    <a href="#" class="hover:text-white">Terms of Work</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Career Application Modal overlay -->
+    <div id="applyModal" class="hidden fixed inset-0 z-[100] bg-black/80 flex items-center justify-center p-4 backdrop-blur-sm animate-fade-in">
+        <div class="bg-construction-card border border-white/10 rounded-2xl w-full max-w-lg p-6 relative">
+            <button onclick="closeApplyModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <h3 class="text-xl font-bold text-white mb-2 font-serif">Apply for Role</h3>
+            <p class="text-xs text-construction-accent font-semibold uppercase tracking-wider mb-6" id="modalRoleName">Senior Site Engineer</p>
+
+            <form onsubmit="handleApplySubmit(event)" class="space-y-4">
+                <div class="space-y-1">
+                    <label class="text-[10px] uppercase font-bold text-gray-400">Full Name</label>
+                    <input type="text" required class="w-full bg-[#0A0C10] border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-construction-accent" placeholder="e.g. Rahul Sharma">
+                </div>
+                <div class="space-y-1">
+                    <label class="text-[10px] uppercase font-bold text-gray-400">Email ID</label>
+                    <input type="email" required class="w-full bg-[#0A0C10] border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-construction-accent" placeholder="e.g. rahul@example.com">
+                </div>
+                <div class="space-y-1">
+                    <label class="text-[10px] uppercase font-bold text-gray-400">Cover Letter Notes</label>
+                    <textarea rows="3" required class="w-full bg-[#0A0C10] border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-construction-accent" placeholder="Mention why you want to join our structural BCD ranks..."></textarea>
+                </div>
+                <button type="submit" class="w-full py-3 bg-construction-accent text-slate-900 font-extrabold uppercase text-xs tracking-wider rounded-lg">
+                    Submit Application
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Live Toast Notification System (Replaces alert boxes cleanly) -->
+    <div id="toastBox" class="hidden fixed bottom-6 right-6 z-[100] bg-slate-900 border-2 border-construction-accent p-4 rounded-xl shadow-2xl flex items-center gap-3 animate-fade-in-up">
+        <div class="w-8 h-8 bg-construction-accent/10 rounded-full flex items-center justify-center text-construction-accent">
+            <i class="fa-solid fa-check"></i>
+        </div>
+        <div>
+            <h5 class="text-sm font-bold text-white" id="toastTitle">Submission Sent</h5>
+            <p class="text-xs text-construction-textMuted" id="toastMessage">We will get in touch shortly.</p>
+        </div>
+    </div>
+
+    <!-- INTERACTIVE SCRIPTS -->
+    <script>
+        // Interactive Service Budget Tool calculations
+        const areaRange = document.getElementById('areaRange');
+        const areaValue = document.getElementById('areaValue');
+        const calcType = document.getElementById('calcType');
+        const calcResult = document.getElementById('calcResult');
+
+        function updateBudgetResult() {
+            const area = parseInt(areaRange.value);
+            areaValue.textContent = Number(area).toLocaleString('en-IN');
+            
+            let minRate = 1500;
+            let maxRate = 1800;
+
+            if (calcType.value === 'premium') {
+                minRate = 2200;
+                maxRate = 2800;
+            }
+
+            const minCost = (area * minRate) / 100000;
+            const maxCost = (area * maxRate) / 100000;
+
+            calcResult.textContent = `₹${minCost.toFixed(1)}L - ₹${maxCost.toFixed(1)}L`;
+        }
+
+        areaRange.addEventListener('input', updateBudgetResult);
+        calcType.addEventListener('change', updateBudgetResult);
+
+        // Portfolio Category filter toggle logic
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.proj-filter-btn');
+
+            // Reset active style on buttons
+            buttons.forEach(btn => {
+                btn.className = "proj-filter-btn px-4 py-2 text-xs font-bold tracking-wide rounded-lg transition-all duration-300 text-construction-textMuted hover:text-white";
+            });
+
+            // Set current active button
+            const activeBtn = document.getElementById(`btn-${category}`);
+            if (activeBtn) {
+                activeBtn.className = "proj-filter-btn px-4 py-2 text-xs font-bold tracking-wide rounded-lg transition-all duration-300 bg-construction-accent text-slate-950";
+            }
+
+            // Toggle card visibility
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Custom Modal control handlers
+        function openApplyModal(roleName) {
+            document.getElementById('modalRoleName').textContent = roleName;
+            document.getElementById('applyModal').classList.remove('hidden');
+        }
+
+        function closeApplyModal() {
+            document.getElementById('applyModal').classList.add('hidden');
+        }
+
+        // UI Toast triggering feedback
+        function showToast(title, message) {
+            const toast = document.getElementById('toastBox');
+            document.getElementById('toastTitle').textContent = title;
+            document.getElementById('toastMessage').textContent = message;
+            
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 4000);
+        }
+
+        // Quote proposal submit handler
+        function handleQuoteSubmit(e) {
+            e.preventDefault();
+            showToast("Quote Request Received", "Our site architects will review details and mail a detailed estimate prospectus.");
+            e.target.reset();
+        }
+
+        // Career submit handler
+        function handleApplySubmit(e) {
+            e.preventDefault();
+            closeApplyModal();
+            showToast("Application Registered", "Our operational division will contact you for a technical site interview.");
+            e.target.reset();
+        }
+
+        // Mobile drawer toggles
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileDrawer.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
